@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Leer meer over MWK Facilitaire Diensten – een professioneel schoonmaakbedrijf met persoonlijke aanpak, gecertificeerd vakmanschap en milieuvriendelijke werkwijze." />
+  <meta name="keywords" content="over ons, MWK facilitaire diensten, schoonmaakbedrijf, Karsten Meerwijk, vakmanschap, betrouwbaar" />
+  <meta name="author" content="MWK Facilitaire Diensten" />
+  <meta property="og:title" content="Over ons | MWK Facilitaire Diensten" />
+  <meta property="og:description" content="MWK Facilitaire Diensten staat voor kwaliteit, betrouwbaarheid en persoonlijk contact. Ontdek wie wij zijn en wat ons drijft." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.mwk.nl/over-ons" />
+  <title>Over ons | MWK Facilitaire Diensten</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .hero__back {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      color: rgba(255,255,255,.65);
+      font-size: .875rem;
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+      transition: color var(--transition);
+    }
+    .hero__back:hover { color: var(--clr-accent); }
+    .hero__back svg { width: 14px; height: 14px; }
+
+    .hero {
+      min-height: 44svh;
+      padding-top: calc(var(--header-h) + 2rem);
+      padding-bottom: 3rem;
+    }
+
+    /* Waarden grid */
+    .waarden-section {
+      padding: 5rem 0;
+      background: var(--clr-gray-lt);
+    }
+    .waarden__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 900px) {
+      .waarden__grid { grid-template-columns: 1fr; max-width: 480px; margin-inline: auto; margin-top: 2rem; }
+    }
+    .waarde-card {
+      background: var(--clr-white);
+      border-radius: var(--radius-md);
+      padding: 2.5rem 2rem;
+      box-shadow: var(--shadow-card);
+    }
+    .waarde-card__icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--clr-accent-l);
+      color: var(--clr-accent-d);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .waarde-card__icon svg { width: 24px; height: 24px; }
+    .waarde-card__title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--clr-primary);
+      margin-bottom: .6rem;
+    }
+    .waarde-card__desc {
+      color: var(--clr-text-lt);
+      line-height: 1.7;
+      font-size: .93rem;
+    }
+
+    /* Profiel kaart */
+    .team-section {
+      padding: 5rem 0;
+      background: var(--clr-white);
+    }
+    .team__inner {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    @media (max-width: 900px) {
+      .team__inner { grid-template-columns: 1fr; gap: 2rem; }
+    }
+    .team__profile-card {
+      background: var(--clr-gray-lt);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      text-align: center;
+    }
+    .team__profile-img-wrap {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: var(--clr-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .team__profile-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .team__profile-placeholder {
+      color: rgba(255,255,255,.35);
+    }
+    .team__profile-placeholder svg { width: 72px; height: 72px; }
+    .team__profile-info {
+      padding: 1.5rem;
+    }
+    .team__profile-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--clr-primary);
+      margin-bottom: .25rem;
+    }
+    .team__profile-role {
+      font-size: .88rem;
+      font-weight: 600;
+      color: var(--clr-accent-d);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+    .team__content h2 { margin-bottom: 1.25rem; }
+    .team__text {
+      color: var(--clr-text-lt);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .team__contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      margin-top: 1.5rem;
+    }
+    .team__contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .6rem 1.25rem;
+      border-radius: 50px;
+      background: var(--clr-gray-lt);
+      font-size: .9rem;
+      font-weight: 600;
+      color: var(--clr-primary);
+      transition: background var(--transition), color var(--transition);
+    }
+    .team__contact-link:hover { background: var(--clr-primary); color: var(--clr-white); }
+    .team__contact-link svg { width: 16px; height: 16px; }
+
+    /* Statistieken balk */
+    .stats-section {
+      padding: 3.5rem 0;
+      background: var(--clr-primary);
+      color: var(--clr-white);
+    }
+    .stats__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      .stats__grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .stat__number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--clr-accent);
+      line-height: 1;
+      margin-bottom: .4rem;
+    }
+    .stat__label {
+      font-size: .88rem;
+      font-weight: 500;
+      opacity: .8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo" aria-label="MWK Facilitaire Diensten – home">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 422 157.69" class="logo-svg" aria-hidden="true">
+          <defs>
+            <style>.l1{fill:#2b3181}.l2{fill:#646363}.l3{fill:#6ac4cf}.l4{fill:#0099b1}</style>
+          </defs>
+          <polygon class="l1" points="175.62 32.74 155.42 66.68 134.63 32.74 116.96 32.74 116.96 96.51 136.54 96.51 136.54 68.43 150.39 90.77 159.86 90.77 173.74 67.42 173.89 96.51 193.48 96.51 193.29 32.74 175.62 32.74"/>
+          <polygon class="l1" points="275.47 69.46 264.34 32.74 244.58 32.74 232.81 68.97 221.71 32.74 199.58 32.74 219.98 96.51 243.03 96.51 253.88 62.41 264.16 96.51 287.21 96.51 307.61 32.74 287.21 32.74 275.47 69.46"/>
+          <polygon class="l1" points="354.25 96.51 379.12 96.51 352.33 60.84 377.85 32.74 354.44 32.74 333.48 55.84 333.48 32.74 312.35 32.74 312.35 96.51 333.48 96.51 333.48 80.72 338.27 75.4 354.25 96.51"/>
+          <path class="l2" d="M193.93,115.3v-1.42h7.8v1.42h-7.8ZM196.18,126.49v-14.18c0-1.12.33-2.02.98-2.71.66-.69,1.6-1.03,2.83-1.03.48,0,.94.06,1.39.19.45.13.82.33,1.13.6l-.58,1.27c-.24-.21-.52-.36-.84-.47-.32-.1-.66-.16-1.03-.16-.72,0-1.27.2-1.66.6-.38.4-.58.99-.58,1.78v1.92l.05.79v11.4h-1.7Z"/>
+          <path class="l2" d="M207.34,126.61c-.94,0-1.76-.16-2.46-.47-.7-.31-1.23-.74-1.6-1.3-.37-.55-.55-1.19-.55-1.91,0-.66.16-1.25.47-1.79s.82-.97,1.54-1.3c.71-.33,1.67-.49,2.87-.49h4.34v1.27h-4.3c-1.22,0-2.06.22-2.53.65-.47.43-.71.97-.71,1.61,0,.72.28,1.3.84,1.73s1.34.65,2.35.65,1.79-.22,2.48-.66c.7-.44,1.2-1.08,1.52-1.91l.38,1.18c-.32.83-.88,1.5-1.67,1.99s-1.79.74-2.99.74ZM211.69,126.49v-2.78l-.07-.46v-4.66c0-1.07-.3-1.9-.9-2.47-.6-.58-1.49-.86-2.68-.86-.82,0-1.59.14-2.33.41-.74.27-1.36.63-1.87,1.08l-.77-1.27c.64-.54,1.41-.96,2.3-1.26.9-.3,1.84-.44,2.83-.44,1.63,0,2.89.4,3.78,1.21.89.81,1.33,2.04,1.33,3.68v7.82h-1.63Z"/>
+          <path class="l2" d="M223.18,126.61c-1.25,0-2.36-.28-3.35-.83-.98-.55-1.76-1.31-2.32-2.28-.56-.97-.84-2.08-.84-3.32s.28-2.38.84-3.34c.56-.96,1.33-1.71,2.32-2.26.98-.54,2.1-.82,3.35-.82,1.07,0,2.04.21,2.9.62.86.42,1.54,1.04,2.04,1.87l-1.27.86c-.43-.64-.97-1.11-1.61-1.42-.64-.3-1.34-.46-2.09-.46-.9,0-1.7.2-2.42.61s-1.29.98-1.7,1.72c-.42.74-.62,1.6-.62,2.59s.21,1.86.62,2.59.98,1.31,1.7,1.72,1.53.61,2.42.61c.75,0,1.45-.15,2.09-.46s1.18-.77,1.61-1.39l1.27.86c-.5.82-1.18,1.44-2.04,1.86-.86.42-1.83.64-2.9.64Z"/>
+          <path class="l2" d="M232.13,111.1c-.35,0-.65-.12-.89-.36s-.36-.53-.36-.86.12-.62.36-.85c.24-.23.54-.35.89-.35s.65.11.89.34c.24.22.36.5.36.84s-.12.65-.35.89c-.23.24-.53.36-.9.36ZM231.27,126.49v-12.6h1.7v12.6h-1.7Z"/>
+          <path class="l2" d="M237.73,126.49v-17.81h1.7v17.81h-1.7Z"/>
+          <path class="l2" d="M245.05,111.1c-.35,0-.65-.12-.89-.36-.24-.24-.36-.53-.36-.86s.12-.62.36-.85c.24-.23.54-.35.89-.35s.65.11.89.34c.24.22.36.5.36.84s-.12.65-.35.89c-.23.24-.53.36-.9.36ZM244.18,126.49v-12.6h1.7v12.6h-1.7Z"/>
+          <path class="l2" d="M248.67,115.3v-1.42h7.8v1.42h-7.8ZM254.62,126.61c-1.18,0-2.1-.32-2.74-.96-.64-.64-.96-1.54-.96-2.71v-11.83h1.7v11.74c0,.74.19,1.3.56,1.7.38.4.92.6,1.62.6.75,0,1.38-.22,1.87-.65l.6,1.22c-.34.3-.74.53-1.21.67-.47.14-.96.22-1.45.22Z"/>
+          <path class="l2" d="M263.93,126.61c-.94,0-1.76-.16-2.46-.47-.7-.31-1.23-.74-1.6-1.3-.37-.55-.55-1.19-.55-1.91,0-.66.16-1.25.47-1.79.31-.54.82-.97,1.54-1.3s1.67-.49,2.87-.49h4.34v1.27h-4.3c-1.22,0-2.06.22-2.53.65s-.71.97-.71,1.61c0,.72.28,1.3.84,1.73.56.43,1.34.65,2.35.65s1.79-.22,2.48-.66c.7-.44,1.2-1.08,1.52-1.91l.38,1.18c-.32.83-.88,1.5-1.67,1.99s-1.79.74-2.99.74ZM268.28,126.49v-2.78l-.07-.46v-4.66c0-1.07-.3-1.9-.9-2.47-.6-.58-1.49-.86-2.68-.86-.82,0-1.59.14-2.33.41-.74.27-1.36.63-1.87,1.08l-.77-1.27c.64-.54,1.41-.96,2.3-1.26.9-.3,1.84-.44,2.83-.44,1.63,0,2.89.4,3.78,1.21.89.81,1.33,2.04,1.33,3.68v7.82h-1.63Z"/>
+          <path class="l2" d="M275.41,111.1c-.35,0-.65-.12-.89-.36-.24-.24-.36-.53-.36-.86s.12-.62.36-.85c.24-.23.54-.35.89-.35s.65.11.89.34c.24.22.36.5.36.84s-.12.65-.35.89c-.23.24-.53.36-.9.36ZM274.54,126.49v-12.6h1.7v12.6h-1.7Z"/>
+          <path class="l2" d="M281,126.49v-12.6h1.63v3.43l-.17-.6c.35-.96.94-1.69,1.78-2.2.83-.5,1.86-.76,3.1-.76v1.66c-.06,0-.13,0-.19-.01-.06,0-.13-.01-.19-.01-1.33,0-2.37.4-3.12,1.21s-1.13,1.96-1.13,3.44v6.43h-1.7Z"/>
+          <path class="l2" d="M295.66,126.61c-1.31,0-2.46-.28-3.46-.83-.99-.55-1.77-1.31-2.33-2.28-.56-.97-.84-2.08-.84-3.32s.27-2.35.8-3.31,1.27-1.72,2.21-2.27c.94-.55,1.99-.83,3.16-.83s2.24.27,3.16.8,1.64,1.29,2.17,2.26c.53.97.79,2.08.79,3.35,0,.08,0,.16-.01.25s-.01.18-.01.28h-10.97v-1.27h10.06l-.67.5c0-.91-.2-1.72-.59-2.44-.39-.71-.92-1.27-1.6-1.67-.67-.4-1.45-.6-2.33-.6s-1.64.2-2.33.6c-.69.4-1.22.96-1.61,1.68-.38.72-.58,1.54-.58,2.47v.26c0,.96.21,1.8.64,2.53.42.73,1.02,1.3,1.78,1.7s1.63.61,2.6.61c.77,0,1.48-.14,2.15-.41s1.24-.69,1.72-1.25l.96,1.1c-.56.67-1.26,1.18-2.1,1.54-.84.35-1.76.53-2.77.53Z"/>
+          <path class="l2" d="M316.11,126.61c-1.2,0-2.28-.27-3.23-.82-.95-.54-1.7-1.3-2.24-2.27s-.82-2.08-.82-3.35.27-2.4.82-3.36,1.29-1.71,2.24-2.24c.95-.54,2.03-.8,3.23-.8,1.1,0,2.09.25,2.96.74.87.5,1.57,1.22,2.09,2.17.52.95.78,2.12.78,3.49s-.26,2.52-.77,3.48c-.51.96-1.2,1.69-2.08,2.2s-1.87.76-2.99.76ZM316.23,125.09c.9,0,1.7-.2,2.41-.61.71-.41,1.27-.98,1.68-1.73.41-.74.61-1.6.61-2.58s-.2-1.86-.61-2.59c-.41-.74-.97-1.31-1.68-1.72-.71-.41-1.52-.61-2.41-.61s-1.67.2-2.38.61-1.26.98-1.68,1.72c-.42.74-.62,1.6-.62,2.59s.21,1.84.62,2.58c.42.74.98,1.32,1.68,1.73s1.5.61,2.38.61ZM320.98,126.49v-3.79l.17-2.54-.24-2.54v-8.93h1.7v17.81h-1.63Z"/>
+          <path class="l2" d="M328.23,111.1c-.35,0-.65-.12-.89-.36-.24-.24-.36-.53-.36-.86s.12-.62.36-.85c.24-.23.54-.35.89-.35s.65.11.89.34c.24.22.36.5.36.84s-.12.65-.35.89c-.23.24-.53.36-.9.36ZM327.37,126.49v-12.6h1.7v12.6h-1.7Z"/>
+          <path class="l2" d="M339.17,126.61c-1.31,0-2.46-.28-3.46-.83-.99-.55-1.77-1.31-2.33-2.28-.56-.97-.84-2.08-.84-3.32s.27-2.35.8-3.31,1.27-1.72,2.21-2.27c.94-.55,1.99-.83,3.16-.83s2.24.27,3.16.8,1.64,1.29,2.17,2.26c.53.97.79,2.08.79,3.35,0,.08,0,.16-.01.25s-.01.18-.01.28h-10.97v-1.27h10.06l-.67.5c0-.91-.2-1.72-.59-2.44-.39-.71-.92-1.27-1.6-1.67-.67-.4-1.45-.6-2.33-.6s-1.64.2-2.33.6c-.69.4-1.22.96-1.61,1.68-.38.72-.58,1.54-.58,2.47v.26c0,.96.21,1.8.64,2.53.42.73,1.02,1.3,1.78,1.7s1.63.61,2.6.61c.77,0,1.48-.14,2.15-.41s1.24-.69,1.72-1.25l.96,1.1c-.56.67-1.26,1.18-2.1,1.54-.84.35-1.76.53-2.77.53Z"/>
+          <path class="l2" d="M354.75,113.77c1.02,0,1.92.2,2.7.59s1.38.99,1.82,1.79c.44.8.66,1.81.66,3.02v7.32h-1.7v-7.15c0-1.33-.33-2.33-1-3.01-.66-.68-1.6-1.02-2.8-1.02-.9,0-1.68.18-2.34.54-.66.36-1.18.88-1.54,1.56-.36.68-.54,1.5-.54,2.46v6.62h-1.7v-12.6h1.63v3.46l-.26-.65c.4-.91,1.04-1.63,1.92-2.15.88-.52,1.93-.78,3.14-.78Z"/>
+          <path class="l2" d="M367.93,126.61c-1.04,0-2.02-.15-2.95-.44-.93-.3-1.66-.67-2.18-1.12l.77-1.34c.51.38,1.17.72,1.97,1,.8.28,1.64.42,2.52.42,1.2,0,2.06-.19,2.59-.56.53-.38.79-.88.79-1.5,0-.46-.15-.83-.44-1.09-.3-.26-.68-.46-1.16-.6-.48-.14-1.02-.25-1.61-.35-.59-.1-1.18-.21-1.76-.34s-1.12-.32-1.6-.56c-.48-.25-.87-.59-1.16-1.02-.3-.43-.44-1.01-.44-1.73s.19-1.3.58-1.85.95-.97,1.69-1.28c.74-.31,1.65-.47,2.72-.47.82,0,1.63.11,2.45.32.82.22,1.49.5,2.02.85l-.74,1.37c-.56-.38-1.16-.66-1.8-.83-.64-.17-1.28-.25-1.92-.25-1.14,0-1.97.2-2.51.59-.54.39-.8.89-.8,1.5,0,.48.15.86.44,1.13.3.27.69.48,1.18.64.49.15,1.02.28,1.61.37.58.1,1.17.21,1.75.35.58.14,1.12.32,1.61.55.49.23.88.56,1.18.98.3.42.44.98.44,1.67,0,.74-.2,1.37-.61,1.91-.41.54-1,.95-1.78,1.25-.78.3-1.72.44-2.82.44Z"/>
+          <path class="l2" d="M374.29,115.3v-1.42h7.8v1.42h-7.8ZM380.24,126.61c-1.18,0-2.1-.32-2.74-.96-.64-.64-.96-1.54-.96-2.71v-11.83h1.7v11.74c0,.74.19,1.3.56,1.7.38.4.92.6,1.62.6.75,0,1.38-.22,1.87-.65l.6,1.22c-.34.3-.74.53-1.21.67-.47.14-.96.22-1.45.22Z"/>
+          <path class="l2" d="M390.89,126.61c-1.31,0-2.46-.28-3.46-.83-.99-.55-1.77-1.31-2.33-2.28-.56-.97-.84-2.08-.84-3.32s.27-2.35.8-3.31,1.27-1.72,2.21-2.27c.94-.55,1.99-.83,3.16-.83s2.24.27,3.16.8,1.64,1.29,2.17,2.26c.53.97.79,2.08.79,3.35,0,.08,0,.16-.01.25s-.01.18-.01.28h-10.97v-1.27h10.06l-.67.5c0-.91-.2-1.72-.59-2.44-.39-.71-.92-1.27-1.6-1.67-.67-.4-1.45-.6-2.33-.6s-1.64.2-2.33.6c-.69.4-1.22.96-1.61,1.68-.38.72-.58,1.54-.58,2.47v.26c0,.96.21,1.8.64,2.53.42.73,1.02,1.3,1.78,1.7s1.63.61,2.6.61c.77,0,1.48-.14,2.15-.41s1.24-.69,1.72-1.25l.96,1.1c-.56.67-1.26,1.18-2.1,1.54-.84.35-1.76.53-2.77.53Z"/>
+          <path class="l2" d="M406.47,113.77c1.02,0,1.92.2,2.7.59s1.38.99,1.82,1.79c.44.8.66,1.81.66,3.02v7.32h-1.7v-7.15c0-1.33-.33-2.33-1-3.01-.66-.68-1.6-1.02-2.8-1.02-.9,0-1.68.18-2.34.54-.66.36-1.18.88-1.54,1.56-.36.68-.54,1.5-.54,2.46v6.62h-1.7v-12.6h1.63v3.46l-.26-.65c.4-.91,1.04-1.63,1.92-2.15.88-.52,1.93-.78,3.14-.78Z"/>
+          <path class="l3" d="M89.86,12.54c3.41-.9,5.42-4.44,4.52-7.86-.96-3.4-4.5-5.41-7.9-4.45-3.41.9-5.37,4.43-4.46,7.84.96,3.4,4.5,5.41,7.84,4.46Z"/>
+          <path class="l3" d="M60.11,60.85c1.17.72,2.45,1.1,3.72,1.23.06.04.16,0,.31.02.52.02,1.09.02,1.63-.07,5.69-.27,10.87-1.54,16.22,2.55,1.76,1.39,3.8,3.47,4.39,5.68.04.14.08.29.11.43.32,1.41,1.21,2.61,2.56,3.44,2.63,1.57,6.05.66,7.61-1.97,1.57-2.63.71-6.06-1.93-7.67-1.46-.85-3.14-.97-4.65-.47-2.21.59-5.06-.25-7.1-1.16-6.13-2.75-7.5-7.9-9.99-13.01-.19-.52-.42-1.02-.7-1.46-.09-.13-.16-.21-.22-.25-.7-1.1-1.66-1.98-2.83-2.7-4.22-2.54-9.72-1.13-12.24,3.14-2.54,4.22-1.13,9.72,3.09,12.26Z"/>
+          <path class="l3" d="M24.51,41.35c2.71,1.49,6.12.54,7.62-2.12,1.51-2.66.6-6.08-2.12-7.62-2.66-1.51-6.07-.55-7.58,2.11-1.56,2.68-.6,6.08,2.08,7.64Z"/>
+          <path class="l3" d="M6.56,42.6c-4.75,1.31-7.55,6.28-6.24,11.02,1.31,4.75,6.23,7.57,10.98,6.26,4.8-1.32,7.61-6.24,6.3-10.99-1.32-4.8-6.28-7.55-11.04-6.29Z"/>
+          <path class="l3" d="M30,72.59c-2.08-1.18-4.75-.47-5.92,1.65-1.22,2.09-.47,4.75,1.61,5.93,2.09,1.22,4.75.47,5.97-1.62,1.18-2.08.43-4.74-1.66-5.96Z"/>
+          <path class="l3" d="M79.07,39.14c4.8-1.32,7.55-6.28,6.24-11.02-1.31-4.75-6.23-7.57-10.98-6.26-4.8,1.32-7.57,6.23-6.26,10.98,1.32,4.8,6.24,7.61,10.99,6.3Z"/>
+          <path class="l3" d="M153.19,115.41c-.07-.08-.18-.11-.3-.18-.47-.23-.98-.41-1.54-.57-3.17-1.12-4.24-1.36-8.86-2.92-2.53-.79-3.15-.97-4.59-1.52,2.26,4.04,1.85,8.37,2.11,12.95-.03,2.02.62,3.9,1.82,5.49,2.95,3.95,8.58,4.78,12.53,1.83,3.94-3,4.72-8.61,1.77-12.57-.8-1.08-1.8-1.94-2.93-2.52Z"/>
+          <path class="l3" d="M110.98,146.73c-2.98.79-4.74,3.88-3.9,6.85.79,2.98,3.88,4.74,6.85,3.9,2.97-.84,4.74-3.88,3.9-6.85-.84-2.97-3.88-4.74-6.85-3.9Z"/>
+          <path class="l3" d="M85.64,98.15c.13.12.26.19.38.26,1.22.71,2.73.98,4.23.63,2.98-.79,4.75-3.83,4.01-6.83-.73-2.95-3.79-4.76-6.78-4.02-1.64.43-2.94,1.55-3.64,2.97-1.18,1.96-3.74,3.36-5.84,4.17-6.26,2.43-10.88-.26-16.27-2.12-.47-.23-.98-.41-1.53-.52-.11-.02-.22-.05-.33-.07-1.25-.24-2.57-.19-3.89.1-4.78,1.21-7.7,6.11-6.49,10.88,1.23,4.82,6.11,7.7,10.88,6.49,1.35-.36,2.53-.93,3.5-1.75.08-.07.17-.15.25-.22.42-.37.77-.77,1.13-1.17,3.82-4.25,6.58-8.8,13.24-9.69,2.24-.29,5.13-.28,7.13.89Z"/>
+          <path class="l3" d="M55.9,75.09c-1.31-4.75-6.23-7.57-10.98-6.26-4.8,1.32-7.61,6.24-6.29,11.04,1.31,4.75,6.28,7.55,11.02,6.24,4.75-1.31,7.57-6.23,6.24-11.02Z"/>
+          <path class="l3" d="M108.7,115.78c1.57-2.63.71-6.06-1.92-7.63-2.69-1.6-6.11-.7-7.67,1.93-.85,1.46-1.02,3.15-.47,4.65.54,2.23-.25,5.06-1.16,7.1-2.75,6.13-7.9,7.5-13.05,10-.47.18-.97.41-1.46.7-.08.07-.17.15-.26.17-1.04.74-1.97,1.71-2.64,2.86-2.54,4.22-1.13,9.72,3.09,12.26,4.27,2.52,9.77,1.12,12.31-3.11.67-1.16,1.05-2.44,1.18-3.71.04-.06.06-.17.02-.31.06-.53.02-1.09-.02-1.64-.27-5.69-1.54-10.87,2.55-16.22,1.34-1.75,3.42-3.79,5.68-4.39.14-.04.24-.06.38-.1,1.41-.32,2.66-1.22,3.44-2.56Z"/>
+          <path class="l3" d="M47.12,57.7c2.41-4.3.91-9.77-3.38-12.18-4.31-2.46-9.78-.96-12.19,3.33-2.46,4.31-.96,9.78,3.33,12.19,4.31,2.46,9.78.96,12.24-3.35Z"/>
+          <path class="l3" d="M119.16,94.45c-3.08-.37-5.85,1.81-6.23,4.84-.22,1.71.36,3.3,1.39,4.47,1.46,1.83,1.82,4.72,1.8,6.99-.03,6.7-4.19,10.02-7.89,14.34-.36.4-.71.81-1.06,1.26-.07.12-.11.18-.13.29-.7,1.06-1.14,2.31-1.35,3.65-.59,4.95,2.9,9.38,7.79,9.98,4.95.59,9.38-2.9,9.98-7.79.21-1.34.07-2.64-.36-3.87l-.09-.34c-.19-.52-.46-.96-.7-1.46-2.58-5.08-5.82-9.32-4.19-15.83.5-2.19,1.58-4.9,3.41-6.36.13-.09.21-.16.35-.25h0c1.11-.86,1.9-2.15,2.11-3.7.37-3.08-1.81-5.85-4.84-6.23Z"/>
+          <path class="l3" d="M108.95,83.32c.38-3.04-1.81-5.85-4.89-6.22-1.64-.18-3.25.35-4.41,1.43-1.84,1.41-4.72,1.82-6.99,1.8-6.7-.03-10.02-4.19-14.34-7.89-.42-.4-.82-.76-1.26-1.06-.12-.07-.2-.15-.3-.18-1.06-.7-2.31-1.14-3.64-1.3-4.95-.59-9.37,2.9-9.98,7.79-.61,4.9,2.9,9.37,7.79,9.98,1.33.16,2.63.02,3.87-.36.1-.03.19-.05.32-.14.47-.18.97-.41,1.46-.7,5.09-2.53,9.33-5.77,15.83-4.19,2.2.55,4.91,1.63,6.31,3.42.09.13.17.26.29.33v.05h.01c.86,1.11,2.15,1.9,3.69,2.06,3.1.42,5.87-1.76,6.23-4.84Z"/>
+          <path class="l3" d="M110.85,91.47c-1.93-2.42-5.45-2.88-7.87-.95-1.19.93-1.91,2.31-2.11,3.7,0,.16-.02.31-.04.42-.26,2.33-2.02,4.6-3.61,6.21-4.82,4.73-10.07,4.16-15.77,4.59-.52-.02-1.07.03-1.62.12l-.34.09c-1.22.27-2.45.86-3.51,1.7-3.88,3.04-4.56,8.62-1.51,12.55,3.04,3.88,8.67,4.55,12.55,1.51,1.08-.8,1.88-1.84,2.46-2.97.08-.07.11-.18.18-.3.22-.52.4-1.03.52-1.53,1.81-5.42,2.52-10.71,8.24-14.18,1.95-1.19,4.63-2.36,6.91-2.09.12.07.28.08.44.09,1.39.2,2.88-.2,4.12-1.14,2.44-1.88,2.85-5.39.96-7.82Z"/>
+          <path class="l3" d="M189.95,85.13c4.75-1.31,9.65,1.46,10.98,6.26,1.31,4.75-1.46,9.65-6.26,10.98-4.75,1.31-9.65-1.46-10.98-6.26-1.31-4.75,1.44-9.7,6.26-10.98Z"/>
+          <path class="l3" d="M106.57,39.53c.73-1.33,1.96-3.71,3.07-6.49.43-1.5.98-2.98,1.52-4.51.84-3.13,1.19-6.32.32-8.8-1.85-3.81-6.23-5.9-10.45-4.73-4.75,1.31-7.57,6.23-6.24,11.02.34,1.3.96,2.47,1.79,3.44.06.04.13.12.22.25l1.21,1.07c3.26,2.81,6.63,5.01,8.56,8.76Z"/>
+          <path class="l3" d="M99.61,50.84h0c-.07-1.3-.12-2.62-.22-3.96,0-.57-.04-1.12-.18-1.65.02-.11,0-.21-.03-.3-.28-1.26-.86-2.45-1.7-3.51-3.04-3.88-8.68-4.6-12.56-1.56-3.88,3.04-4.6,8.68-1.51,12.55.81,1.12,1.85,1.93,2.98,2.51.06.04.18.11.29.13.52.22,1.03.4,1.54.57,5.15,1.67,10.18,2.41,13.66,7.44,0-.11.01-.22.01-.33-2.45-5.83-2.28-11.88-2.28-11.88Z"/>
+          <path class="l4" d="M89.86,12.54c3.41-.9,5.42-4.44,4.52-7.86-.96-3.4-4.5-5.41-7.9-4.45-3.41.9-5.37,4.43-4.46,7.84.96,3.4,4.5,5.41,7.84,4.46Z"/>
+          <path class="l4" d="M60.11,60.85c1.17.72,2.45,1.1,3.72,1.23.06.04.16,0,.31.02.52.02,1.09.02,1.63-.07,5.69-.27,10.87-1.54,16.22,2.55,1.76,1.39,3.8,3.47,4.39,5.68.04.14.08.29.11.43.32,1.41,1.21,2.61,2.56,3.44,2.63,1.57,6.05.66,7.61-1.97,1.57-2.63.71-6.06-1.93-7.67-1.46-.85-3.14-.97-4.65-.47-2.21.59-5.06-.25-7.1-1.16-6.13-2.75-7.5-7.9-9.99-13.01-.19-.52-.42-1.02-.7-1.46-.09-.13-.16-.21-.22-.25-.7-1.1-1.66-1.98-2.83-2.7-4.22-2.54-9.72-1.13-12.24,3.14-2.54,4.22-1.13,9.72,3.09,12.26Z"/>
+          <path class="l4" d="M24.51,41.35c2.71,1.49,6.12.54,7.62-2.12,1.51-2.66.6-6.08-2.12-7.62-2.66-1.51-6.07-.55-7.58,2.11-1.56,2.68-.6,6.08,2.08,7.64Z"/>
+          <path class="l4" d="M6.56,42.6c-4.75,1.31-7.55,6.28-6.24,11.02,1.31,4.75,6.23,7.57,10.98,6.26,4.8-1.32,7.61-6.24,6.3-10.99-1.32-4.8-6.28-7.55-11.04-6.29Z"/>
+          <path class="l4" d="M30,72.59c-2.08-1.18-4.75-.47-5.92,1.65-1.22,2.09-.47,4.75,1.61,5.93,2.09,1.22,4.75.47,5.97-1.62,1.18-2.08.43-4.74-1.66-5.96Z"/>
+          <path class="l4" d="M153.18,115.43c-.44-.23-.89-.44-1.36-.62-3.06-1.15-6.24-2.01-9.33-3.06-2.53-.79-3.15-.97-4.59-1.52,2.26,4.04,1.85,8.37,2.11,12.95-.03,2.02.62,3.9,1.82,5.49,2.95,3.95,8.58,4.78,12.53,1.83,3.94-3,4.72-8.61,1.77-12.57-.8-1.07-1.8-1.89-2.94-2.5Z"/>
+          <path class="l4" d="M110.98,146.73c-2.98.79-4.74,3.88-3.9,6.85.79,2.98,3.88,4.74,6.85,3.9,2.97-.84,4.74-3.88,3.9-6.85-.84-2.97-3.88-4.74-6.85-3.9Z"/>
+          <path class="l4" d="M179.14,109.34c-1.26-.68-2.69-1.06-4.19-1.17-3.52-.24-7.26.45-10.57,1.6-.75.26-1.49.56-2.27.78-.28.08-1.14.42-1.4.15,2.7,2.73,3.95,6.29,5.72,9.85.24.5.47,1.01.79,1.44.07.08.1.18.17.26.74,1.04,1.71,1.97,2.91,2.63,4.3,2.41,9.77.91,12.18-3.38,1.61-2.87,1.47-6.51-.28-9.28-.79-1.26-1.85-2.21-3.08-2.87Z"/>
+          <path class="l4" d="M55.9,75.09c-1.31-4.75-6.23-7.57-10.98-6.26-4.8,1.32-7.61,6.24-6.29,11.04,1.31,4.75,6.28,7.55,11.02,6.24,4.75-1.31,7.57-6.23,6.24-11.02Z"/>
+          <path class="l4" d="M119.16,94.45c-3.08-.37-5.85,1.81-6.23,4.84-.22,1.71.36,3.3,1.39,4.47,1.46,1.83,1.82,4.72,1.8,6.99-.03,6.7-4.19,10.02-7.89,14.34-.36.4-.71.81-1.06,1.26-.07.12-.11.18-.13.29-.7,1.06-1.14,2.31-1.35,3.65-.59,4.95,2.9,9.38,7.79,9.98,4.95.59,9.38-2.9,9.98-7.79.21-1.34.07-2.64-.36-3.87l-.09-.34c-.19-.52-.46-.96-.7-1.46-2.58-5.08-5.82-9.32-4.19-15.83.5-2.19,1.58-4.9,3.41-6.36.13-.09.21-.16.35-.25h0c1.11-.86,1.9-2.15,2.11-3.7.37-3.08-1.81-5.85-4.84-6.23Z"/>
+          <path class="l4" d="M108.95,83.32c.38-3.04-1.81-5.85-4.89-6.22-1.64-.18-3.25.35-4.41,1.43-1.84,1.41-4.72,1.82-6.99,1.8-6.7-.03-10.02-4.19-14.34-7.89-.42-.4-.82-.76-1.26-1.06-.12-.07-.2-.15-.3-.18-1.06-.7-2.31-1.14-3.64-1.3-4.95-.59-9.37,2.9-9.98,7.79-.61,4.9,2.9,9.37,7.79,9.98,1.33.16,2.63.02,3.87-.36.1-.03.19-.05.32-.14.47-.18.97-.41,1.46-.7,5.09-2.53,9.33-5.77,15.83-4.19,2.2.55,4.91,1.63,6.31,3.42.09.13.17.26.29.33v.05h.01c.86,1.11,2.15,1.9,3.69,2.06,3.1.42,5.87-1.76,6.23-4.84Z"/>
+          <path class="l4" d="M110.85,91.47c-1.93-2.42-5.45-2.88-7.87-.95-1.19.93-1.91,2.31-2.11,3.7,0,.16-.02.31-.04.42-.26,2.33-2.02,4.6-3.61,6.21-4.82,4.73-10.07,4.16-15.77,4.59-.52-.02-1.07.03-1.62.12l-.34.09c-1.22.27-2.45.86-3.51,1.7-3.88,3.04-4.56,8.62-1.51,12.55,3.04,3.88,8.67,4.55,12.55,1.51,1.08-.8,1.88-1.84,2.46-2.97.08-.07.11-.18.18-.3.22-.52.4-1.03.52-1.53,1.81-5.42,2.52-10.71,8.24-14.18,1.95-1.19,4.63-2.36,6.91-2.09.12.07.28.08.44.09,1.39.2,2.88-.2,4.12-1.14,2.44-1.88,2.85-5.39.96-7.82Z"/>
+          <path class="l4" d="M106.57,39.53c2.05-3.76,3.82-7.8,4.81-11.98.27-1.15.47-2.31.56-3.49.16-2.06-.06-4.07-1.32-5.77-1.05-1.41-2.52-2.49-4.17-3.09s-3.63-.7-5.41-.21c-3.29.91-5.82,3.69-6.43,7.04-.47,2.59.25,5.56,2.06,7.51.32.34.66.65,1.02.95,3.15,2.73,6.84,5.15,8.83,8.94,0,0,.06.1.06.11Z"/>
+          <path class="l4" d="M99.61,50.84h0c-.07-1.3-.12-2.62-.22-3.96,0-.57-.04-1.12-.18-1.65.02-.11,0-.21-.03-.3-.28-1.26-.86-2.45-1.7-3.51-3.04-3.88-8.68-4.6-12.56-1.56-3.88,3.04-4.6,8.68-1.51,12.55.81,1.12,1.85,1.93,2.98,2.51.06.04.18.11.29.13.52.22,1.03.4,1.54.57,5.15,1.67,10.18,2.41,13.66,7.44,0-.11.01-.22.01-.33-2.45-5.83-2.28-11.88-2.28-11.88Z"/>
+          <path class="l3" d="M142.91,140.95c-.03-.1-.1-.18-.17-.26-.37-.42-.77-.77-1.22-1.12-4.21-3.83-8.75-6.59-9.64-13.25-.29-2.24-.28-5.13.89-7.13.07-.12.14-.24.21-.37.76-1.23,1.02-2.74.63-4.23-.74-3-3.79-4.76-6.78-4.02-3,.74-4.81,3.8-4.02,6.78.39,1.65,1.5,2.95,2.92,3.65,2.01,1.17,3.41,3.73,4.22,5.83,2.38,6.27-.26,10.88-2.19,16.23-.17.51-.35,1.02-.51,1.58-.02.11-.05.22-.07.33-.24,1.25-.19,2.57.15,3.87,1.21,4.78,6.11,7.7,10.88,6.49s7.7-6.11,6.47-10.93c-.34-1.3-.96-2.47-1.79-3.44Z"/>
+          <path class="l4" d="M142.91,140.95c-.03-.1-.1-.18-.17-.26-.37-.42-.77-.77-1.22-1.12-4.21-3.83-8.75-6.59-9.64-13.25-.29-2.24-.28-5.13.89-7.13.07-.12.14-.24.21-.37.76-1.23,1.02-2.74.63-4.23-.74-3-3.79-4.76-6.78-4.02-3,.74-4.81,3.8-4.02,6.78.39,1.65,1.5,2.95,2.92,3.65,2.01,1.17,3.41,3.73,4.22,5.83,2.38,6.27-.26,10.88-2.19,16.23-.17.51-.35,1.02-.51,1.58-.02.11-.05.22-.07.33-.24,1.25-.19,2.57.15,3.87,1.21,4.78,6.11,7.7,10.88,6.49s7.7-6.11,6.47-10.93c-.34-1.3-.96-2.47-1.79-3.44Z"/>
+        </svg>
+      </a>
+
+      <nav class="nav" id="nav" role="navigation" aria-label="Hoofdnavigatie">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="index.html#diensten" class="nav__link">Diensten</a></li>
+          <li><a href="over-ons.html" class="nav__link nav__link--active">Over ons</a></li>
+          <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home" aria-label="Hero sectie">
+      <img class="hero__micel" src="Brand%20assets/MWK%20-%20Stijlelement%20-%20hero.svg" alt="" aria-hidden="true" />
+      <div class="container hero__content">
+        <div class="hero__text">
+          <a href="index.html" class="hero__back">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+            Terug naar home
+          </a>
+          <h1 class="hero__title">Vakmanschap met een<br />persoonlijke aanpak</h1>
+          <p class="hero__sub">MWK Facilitaire Diensten staat voor kwaliteit, betrouwbaarheid en eerlijk werk. Ontdek wie wij zijn en wat ons drijft.</p>
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--accent">Neem contact op</a>
+            <a href="#ons-verhaal" class="btn btn--ghost">Ons verhaal</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STATISTIEKEN ===== -->
+    <section class="stats-section" aria-label="Cijfers over MWK">
+      <div class="container">
+        <div class="stats__grid">
+          <div>
+            <p class="stat__number">3</p>
+            <p class="stat__label">Specialistische diensten</p>
+          </div>
+          <div>
+            <p class="stat__number">100%</p>
+            <p class="stat__label">Gecertificeerd personeel</p>
+          </div>
+          <div>
+            <p class="stat__number">24u</p>
+            <p class="stat__label">Reactietijd bij vragen</p>
+          </div>
+          <div>
+            <p class="stat__number">1</p>
+            <p class="stat__label">Vast aanspreekpunt</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ONS VERHAAL ===== -->
+    <section class="over-ons" id="ons-verhaal" aria-labelledby="verhaal-titel">
+      <div class="container over-ons__inner">
+        <div class="over-ons__visual" aria-hidden="true">
+          <div class="over-ons__img-wrap">
+            <img class="over-ons__img-bg" src="images/auto MWK.jpg" alt="MWK Facilitaire Diensten bedrijfsauto" loading="lazy" />
+          </div>
+        </div>
+        <div class="over-ons__content">
+          <p class="section-label">Ons verhaal</p>
+          <h2 class="section-title" id="verhaal-titel">Betrouwbaar. Vakkundig. Persoonlijk.</h2>
+          <p class="over-ons__text">MWK Facilitaire Diensten is een professioneel facilitair dienstverlener gespecialiseerd in schoonmaak, glas- en gevelreiniging en huismeesterdiensten. Wij werken voor een breed scala aan opdrachtgevers: van vastgoedbeheerders en woningbouwcoöperaties tot scholen, zorginstellingen en VvE's.</p>
+          <p class="over-ons__text">Onze kracht zit in de combinatie van vakkundig gecertificeerd personeel, milieuvriendelijke werkwijze en een korte communicatielijn. U weet altijd met wie u te maken heeft en wat u kunt verwachten. Geen verrassingen, geen verborgen kosten — gewoon eerlijk en transparant werk.</p>
+          <div class="over-ons__feats">
+            <div class="over-ons__feat">
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Gecertificeerde medewerkers
+            </div>
+            <div class="over-ons__feat">
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Milieuvriendelijke middelen
+            </div>
+            <div class="over-ons__feat">
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Vaste contactpersoon
+            </div>
+            <div class="over-ons__feat">
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Flexibel en klantgericht
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ONZE WAARDEN ===== -->
+    <section class="waarden-section" id="waarden" aria-labelledby="waarden-titel">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">Waar wij voor staan</p>
+          <h2 class="section-title" id="waarden-titel">Onze kernwaarden</h2>
+          <p class="section-sub">Elke opdracht voeren wij uit met dezelfde toewijding, ongeacht de omvang of het type pand.</p>
+        </header>
+        <div class="waarden__grid">
+          <div class="waarde-card">
+            <div class="waarde-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3 class="waarde-card__title">Betrouwbaarheid</h3>
+            <p class="waarde-card__desc">Wij doen wat wij beloven. Afspraken worden nagekomen, tijdstippen gerespecteerd en werkzaamheden uitgevoerd zoals overeengekomen — zonder verrassingen.</p>
+          </div>
+          <div class="waarde-card">
+            <div class="waarde-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h3 class="waarde-card__title">Kwaliteit</h3>
+            <p class="waarde-card__desc">Ons gecertificeerd personeel werkt vakkundig en nauwkeurig. Wij gebruiken professionele apparatuur en milieuvriendelijke middelen voor een optimaal resultaat.</p>
+          </div>
+          <div class="waarde-card">
+            <div class="waarde-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="waarde-card__title">Persoonlijk contact</h3>
+            <p class="waarde-card__desc">U heeft altijd een vast aanspreekpunt. Wij luisteren naar uw wensen en denken actief mee over de beste aanpak voor uw specifieke situatie.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ONS TEAM ===== -->
+    <section class="team-section" id="team" aria-labelledby="team-titel">
+      <div class="container">
+        <header class="section-header" style="margin-bottom: 3rem;">
+          <p class="section-label">Wie wij zijn</p>
+          <h2 class="section-title" id="team-titel">Maak kennis met MWK</h2>
+        </header>
+        <div class="team__inner">
+          <div class="team__profile-card">
+            <div class="team__profile-img-wrap">
+              <div class="team__profile-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="team__profile-info">
+              <p class="team__profile-name">Karsten Meerwijk</p>
+              <p class="team__profile-role">Eigenaar &amp; directeur</p>
+            </div>
+          </div>
+          <div class="team__content">
+            <p class="section-label">Eigenaar</p>
+            <h2 class="section-title">Karsten Meerwijk</h2>
+            <p class="team__text">Als eigenaar en directeur van MWK Facilitaire Diensten zet Karsten zich dagelijks in voor een uitstekende dienstverlening. Met een hands-on mentaliteit en oog voor detail bewaakt hij de kwaliteit van elke opdracht en zorgt hij voor een soepele samenwerking met opdrachtgevers.</p>
+            <p class="team__text">Karsten gelooft in persoonlijk contact als basis voor een goede samenwerking. Transparantie, eerlijkheid en het nakomen van afspraken staan bij hem centraal — zowel naar klanten als naar medewerkers.</p>
+            <div class="team__contact-links">
+              <a href="tel:+31657930729" class="team__contact-link" aria-label="Bel Karsten Meerwijk">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.59-.59a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+                +31 6 57 93 07 29
+              </a>
+              <a href="mailto:info@mwk.nl" class="team__contact-link" aria-label="Stuur een e-mail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                info@mwk.nl
+              </a>
+              <a href="https://www.linkedin.com/company/mwkfacilitairediensten" class="team__contact-link" target="_blank" rel="noopener" aria-label="LinkedIn profiel">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                  <circle cx="4" cy="4" r="2"/>
+                </svg>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WERKGEBIED ===== -->
+    <section class="over-ons" id="werkgebied" style="background: var(--clr-gray-lt);" aria-labelledby="werkgebied-titel">
+      <div class="container over-ons__inner" style="grid-template-columns: 1fr; max-width: 760px;">
+        <div class="over-ons__content" style="padding: 0;">
+          <p class="section-label">Bereik</p>
+          <h2 class="section-title" id="werkgebied-titel">Lokale partner, landelijk bereik</h2>
+          <p class="over-ons__text">MWK Facilitaire Diensten is actief in heel Nederland. Als lokale partner met landelijk bereik zijn wij flexibel inzetbaar voor opdrachten van uiteenlopende omvang — van een eenmalige reiniging tot een doorlopend facilitair contract.</p>
+          <p class="over-ons__text">Wij werken voor vastgoedbeheerders, woningbouwcoöperaties, scholen, zorginstellingen, winkelcentra en VvE's. De combinatie van persoonlijke betrokkenheid en professionele uitvoering maakt ons tot een betrouwbare partner voor de lange termijn.</p>
+          <a href="#contact" class="btn btn--primary">Vrijblijvende offerte aanvragen</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact" id="contact" aria-labelledby="contact-titel">
+      <div class="container contact__inner">
+
+        <div class="contact__info">
+          <p class="section-label">Contact</p>
+          <h2 class="section-title" id="contact-titel">Neem gerust contact op</h2>
+          <p class="contact__sub">Heeft u vragen of wilt u een vrijblijvende offerte? Wij reageren doorgaans binnen 24 uur.</p>
+
+          <div class="contact__details">
+            <a href="tel:+31657930729" class="contact__detail" aria-label="Bel ons">
+              <span class="contact__detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.59-.59a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+              </span>
+              <span>
+                <strong>Telefoon</strong>
+                +31 6 57 93 07 29
+              </span>
+            </a>
+
+            <a href="mailto:info@mwk.nl" class="contact__detail" aria-label="Stuur een e-mail">
+              <span class="contact__detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </span>
+              <span>
+                <strong>E-mail</strong>
+                info@mwk.nl
+              </span>
+            </a>
+
+            <a href="https://www.linkedin.com/company/mwkfacilitairediensten" class="contact__detail" aria-label="Bezoek onze LinkedIn pagina" target="_blank" rel="noopener">
+              <span class="contact__detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                  <circle cx="4" cy="4" r="2"/>
+                </svg>
+              </span>
+              <span>
+                <strong>LinkedIn</strong>
+                MWK Facilitaire Diensten
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact__form-wrap">
+          <form class="contact-form" id="contact-form" action="https://formspree.io/f/xkoyoabb" method="POST" novalidate aria-label="Contactformulier">
+            <div class="contact-form__group">
+              <label for="naam" class="contact-form__label">Naam <span aria-hidden="true">*</span></label>
+              <input type="text" id="naam" name="naam" class="contact-form__input" placeholder="Uw volledige naam" required autocomplete="name" />
+              <span class="contact-form__error" id="naam-error" role="alert"></span>
+            </div>
+            <div class="contact-form__group">
+              <label for="email" class="contact-form__label">E-mail <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" class="contact-form__input" placeholder="uw@email.nl" required autocomplete="email" />
+              <span class="contact-form__error" id="email-error" role="alert"></span>
+            </div>
+            <div class="contact-form__group">
+              <label for="telefoon" class="contact-form__label">Telefoon</label>
+              <input type="tel" id="telefoon" name="telefoon" class="contact-form__input" placeholder="+31 6 00 00 00 00" autocomplete="tel" />
+            </div>
+            <div class="contact-form__group">
+              <label for="dienst" class="contact-form__label">Dienst</label>
+              <select id="dienst" name="dienst" class="contact-form__input contact-form__select">
+                <option value="">Selecteer een dienst</option>
+                <option value="schoonmaak">Schoonmaak</option>
+                <option value="glas-gevelreiniging">Glas- &amp; Gevelreiniging</option>
+                <option value="huismeesterdiensten">Huismeesterdiensten</option>
+                <option value="overig">Overig</option>
+              </select>
+            </div>
+            <div class="contact-form__group">
+              <label for="bericht" class="contact-form__label">Bericht <span aria-hidden="true">*</span></label>
+              <textarea id="bericht" name="bericht" class="contact-form__input contact-form__textarea" placeholder="Omschrijf uw vraag of verzoek..." required rows="5"></textarea>
+              <span class="contact-form__error" id="bericht-error" role="alert"></span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full" id="submit-btn">
+              <span class="btn__text">Verstuur bericht</span>
+              <span class="btn__spinner" aria-hidden="true"></span>
+            </button>
+            <div class="contact-form__success" id="form-success" role="status" aria-live="polite" hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Bedankt! Uw bericht is verzonden. Wij nemen zo snel mogelijk contact met u op.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="MWK Facilitaire Diensten – terug naar home">
+          <img src="Brand assets/MWK - Logo CMYK.svg" alt="MWK Facilitaire Diensten" class="footer__logo-svg">
+        </a>
+        <ul class="footer__services">
+          <li>Schoonmaak</li>
+          <li>Glas- en gevelreiniging</li>
+          <li>Huismeesterdiensten</li>
+        </ul>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer navigatie">
+        <h3 class="footer__nav-title">Navigatie</h3>
+        <ul class="footer__nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#diensten">Diensten</a></li>
+          <li><a href="over-ons.html">Over ons</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__diensten">
+        <h3 class="footer__nav-title">Diensten</h3>
+        <ul class="footer__nav-list">
+          <li><a href="schoonmaak.html">Schoonmaak</a></li>
+          <li><a href="glas-gevelreiniging.html">Glas- &amp; Gevelreiniging</a></li>
+          <li><a href="huismeesterdiensten.html">Huismeesterdiensten</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__contact">
+        <h3 class="footer__nav-title">Contact</h3>
+        <address class="footer__address">
+          <a href="tel:+31657930729">+31 6 57 93 07 29</a>
+          <a href="mailto:info@mwk.nl">info@mwk.nl</a>
+        </address>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>&copy; <span id="year"></span> MWK Facilitaire Diensten. Alle rechten voorbehouden. KvK: 42044518</p>
+
+        <div class="footer__social" aria-label="Sociale media">
+          <a href="https://www.linkedin.com/company/mwkfacilitairediensten" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scroll-top" aria-label="Terug naar boven" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

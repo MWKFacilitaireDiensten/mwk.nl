@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/karst/.claude/projects/c--Users-karst-OneDrive---MWK-B-V-MWK-Website-Modern/memory/**)",
+      "Read(//c/c/Users/karst/OneDrive - MWK B.V/**)",
+      "Bash(powershell -Command \"\\(Get-Content 'MWK - Stijlelement - CMYK.svg' -Raw\\) -replace '\\\\.cls-2\\\\{fill:#0099b1;\\\\}', '.cls-2{fill:#6ac4cf;}' | Set-Content 'MWK - Stijlelement - hero.svg' -Encoding UTF8\")"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\karst\\OneDrive - MWK B.V\\MWK Website Modern",
+      "c:\\Users\\karst\\.claude\\projects\\c--Users-karst-OneDrive---MWK-B-V-MWK-Website-Modern\\memory"
+    ]
+  }
+}
