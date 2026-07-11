@@ -62,7 +62,7 @@
     /* Waarden grid */
     .waarden-section {
       padding: 5rem 0;
-      background: var(--clr-gray-lt);
+      background: var(--clr-white);
     }
     .waarden__grid {
       display: grid;
@@ -106,11 +106,11 @@
     /* Profiel kaart */
     .team-section {
       padding: 5rem 0;
-      background: var(--clr-white);
+      background: var(--clr-gray-lt);
     }
     .team__inner {
       display: grid;
-      grid-template-columns: 320px 1fr;
+      grid-template-columns: 460px 1fr;
       gap: 4rem;
       align-items: center;
     }
@@ -126,7 +126,7 @@
     }
     .team__profile-img-wrap {
       width: 100%;
-      aspect-ratio: 4/3;
+      aspect-ratio: 1/1;
       background: var(--clr-primary);
       display: flex;
       align-items: center;
@@ -137,6 +137,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      image-rendering: -webkit-optimize-contrast;
     }
     .team__profile-placeholder {
       color: rgba(255,255,255,.35);
@@ -309,35 +310,11 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
             Terug naar home
           </a>
-          <h1 class="hero__title">Vakmanschap met een<br />persoonlijke aanpak</h1>
+          <h1 class="hero__title">Meer schoon,<br />minder zorgen</h1>
           <p class="hero__sub">MWK Facilitaire Diensten staat voor kwaliteit, betrouwbaarheid en eerlijk werk. Ontdek wie wij zijn en wat ons drijft.</p>
           <div class="hero__actions">
             <a href="#contact" class="btn btn--accent">Neem contact op</a>
             <a href="#ons-verhaal" class="btn btn--ghost">Ons verhaal</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== STATISTIEKEN ===== -->
-    <section class="stats-section" aria-label="Cijfers over MWK">
-      <div class="container">
-        <div class="stats__grid">
-          <div>
-            <p class="stat__number">3</p>
-            <p class="stat__label">Specialistische diensten</p>
-          </div>
-          <div>
-            <p class="stat__number">100%</p>
-            <p class="stat__label">Gecertificeerd personeel</p>
-          </div>
-          <div>
-            <p class="stat__number">24u</p>
-            <p class="stat__label">Reactietijd bij vragen</p>
-          </div>
-          <div>
-            <p class="stat__number">1</p>
-            <p class="stat__label">Vast aanspreekpunt</p>
           </div>
         </div>
       </div>
@@ -372,6 +349,56 @@
             <div class="over-ons__feat">
               <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
               Flexibel en klantgericht
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ONS TEAM ===== -->
+    <section class="team-section" id="team" aria-labelledby="team-titel">
+      <div class="container">
+        <header class="section-header" style="margin-bottom: 3rem;">
+          <p class="section-label">Wie wij zijn</p>
+          <h2 class="section-title" id="team-titel">Maak kennis met MWK</h2>
+        </header>
+        <div class="team__inner">
+          <div class="team__profile-card">
+            <div class="team__profile-img-wrap">
+              <img src="images/karsten-meerwijk.jpg" alt="Karsten Meerwijk, eigenaar en directeur van MWK Facilitaire Diensten" loading="lazy" />
+            </div>
+            <div class="team__profile-info">
+              <p class="team__profile-name">Karsten Meerwijk</p>
+              <p class="team__profile-role">Oprichter MWK Facilitaire Diensten</p>
+            </div>
+          </div>
+          <div class="team__content">
+            <p class="section-label">Oprichter</p>
+            <h2 class="section-title">Karsten Meerwijk</h2>
+            <p class="team__text">MWK Facilitaire Diensten is geworteld in een familietraditie van meer dan vijftig jaar ervaring in de facilitaire dienstverlening. Die kennis over vakmanschap, klantrelaties en oog voor detail is van generatie op generatie doorgegeven en vormt vandaag de dag nog steeds het fundament van ons bedrijf.</p>
+            <p class="team__text">Als oprichter bouwt Karsten met MWK Facilitaire Diensten voort op dat familiefundament en zet hij zich dagelijks in voor een uitstekende dienstverlening. Met een hands-on mentaliteit en oog voor detail bewaakt hij de kwaliteit van elke opdracht en zorgt hij voor een soepele samenwerking met opdrachtgevers.</p>
+            <p class="team__text">Karsten gelooft in persoonlijk contact als basis voor een goede samenwerking. Transparantie, eerlijkheid en het nakomen van afspraken staan bij hem centraal.</p>
+            <div class="team__contact-links">
+              <a href="tel:+31657930729" class="team__contact-link" aria-label="Bel Karsten Meerwijk">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.59-.59a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+                +31 6 57 93 07 29
+              </a>
+              <a href="mailto:info@mwk.nl" class="team__contact-link" aria-label="Stuur een e-mail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                info@mwk.nl
+              </a>
+              <a href="https://www.linkedin.com/in/karsten-meerwijk/" class="team__contact-link" target="_blank" rel="noopener" aria-label="LinkedIn profiel van Karsten Meerwijk">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                  <circle cx="4" cy="4" r="2"/>
+                </svg>
+                LinkedIn
+              </a>
             </div>
           </div>
         </div>
@@ -420,67 +447,14 @@
       </div>
     </section>
 
-    <!-- ===== ONS TEAM ===== -->
-    <section class="team-section" id="team" aria-labelledby="team-titel">
-      <div class="container">
-        <header class="section-header" style="margin-bottom: 3rem;">
-          <p class="section-label">Wie wij zijn</p>
-          <h2 class="section-title" id="team-titel">Maak kennis met MWK</h2>
-        </header>
-        <div class="team__inner">
-          <div class="team__profile-card">
-            <div class="team__profile-img-wrap">
-              <div class="team__profile-placeholder" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-                </svg>
-              </div>
-            </div>
-            <div class="team__profile-info">
-              <p class="team__profile-name">Karsten Meerwijk</p>
-              <p class="team__profile-role">Eigenaar &amp; directeur</p>
-            </div>
-          </div>
-          <div class="team__content">
-            <p class="section-label">Eigenaar</p>
-            <h2 class="section-title">Karsten Meerwijk</h2>
-            <p class="team__text">Als eigenaar en directeur van MWK Facilitaire Diensten zet Karsten zich dagelijks in voor een uitstekende dienstverlening. Met een hands-on mentaliteit en oog voor detail bewaakt hij de kwaliteit van elke opdracht en zorgt hij voor een soepele samenwerking met opdrachtgevers.</p>
-            <p class="team__text">Karsten gelooft in persoonlijk contact als basis voor een goede samenwerking. Transparantie, eerlijkheid en het nakomen van afspraken staan bij hem centraal, zowel naar klanten als naar medewerkers.</p>
-            <div class="team__contact-links">
-              <a href="tel:+31657930729" class="team__contact-link" aria-label="Bel Karsten Meerwijk">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.59-.59a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-                </svg>
-                +31 6 57 93 07 29
-              </a>
-              <a href="mailto:info@mwk.nl" class="team__contact-link" aria-label="Stuur een e-mail">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                  <polyline points="22,6 12,13 2,6"/>
-                </svg>
-                info@mwk.nl
-              </a>
-              <a href="https://www.linkedin.com/company/mwkfacilitairediensten" class="team__contact-link" target="_blank" rel="noopener" aria-label="LinkedIn profiel">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
-                  <circle cx="4" cy="4" r="2"/>
-                </svg>
-                LinkedIn
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ===== WERKGEBIED ===== -->
     <section class="over-ons" id="werkgebied" style="background: var(--clr-gray-lt);" aria-labelledby="werkgebied-titel">
       <div class="container over-ons__inner" style="grid-template-columns: 1fr; max-width: 760px;">
         <div class="over-ons__content" style="padding: 0;">
           <p class="section-label">Bereik</p>
-          <h2 class="section-title" id="werkgebied-titel">Actief in de Randstad en Den Haag</h2>
-          <p class="over-ons__text">MWK Facilitaire Diensten is voornamelijk actief in de Randstad en Den Haag en omgeving. Wij zijn flexibel inzetbaar voor opdrachten van uiteenlopende omvang: van een eenmalige reiniging in Den Haag tot een doorlopend facilitair contract voor een complex in de Randstad.</p>
-          <p class="over-ons__text">Wij werken voor vastgoedbeheerders, woningbouwcoöperaties, scholen, zorginstellingen, winkelcentra en VvE's in de regio. De combinatie van persoonlijke betrokkenheid en professionele uitvoering maakt ons tot een betrouwbare lokale partner voor de lange termijn.</p>
+          <h2 class="section-title" id="werkgebied-titel">Een lokale partij met een landelijk bereik</h2>
+          <p class="over-ons__text">MWK Facilitaire Diensten is gevestigd in Den Haag en actief in heel Nederland. Wij zijn flexibel inzetbaar voor opdrachten van uiteenlopende omvang. Wij hebben onze werkmethoden zo ingericht dat wij zo efficiënt mogelijk werken. Ergonomsich verantwoord voor de medewerkers en goed voor het millieu. Wilt u hierover meer weten? Neem dan gerust contact op.</p>
+          <p class="over-ons__text">Wij werken voor vastgoedbeheerders, woningbouwcoöperaties, scholen, zorginstellingen, winkelcentra en VvE's door heel Nederland. De combinatie van persoonlijke betrokkenheid en professionele uitvoering maakt ons tot een betrouwbare partner voor de lange termijn, landelijk inzetbaar met de korte lijnen van een lokale partij.</p>
           <a href="#contact" class="btn btn--primary">Vrijblijvende offerte aanvragen</a>
         </div>
       </div>
