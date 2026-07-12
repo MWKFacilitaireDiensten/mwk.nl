@@ -71,24 +71,6 @@
   }
   </script>
   <style>
-    .hero__back {
-      display: inline-flex;
-      align-items: center;
-      gap: .4rem;
-      color: rgba(255,255,255,.65);
-      font-size: .875rem;
-      font-weight: 500;
-      margin-bottom: 1.25rem;
-      transition: color var(--transition);
-    }
-    .hero__back:hover { color: var(--clr-accent); }
-    .hero__back svg { width: 14px; height: 14px; }
-
-    .hero {
-      min-height: 44svh;
-      padding-top: calc(var(--header-h) + 2rem);
-      padding-bottom: 3rem;
-    }
 
     /* Waarom werken bij MWK */
     .redenen-section {
@@ -142,7 +124,8 @@
 
     /* Vacature */
     .vacature-section {
-      padding: 5rem 0;
+      padding-top: calc(var(--header-h) + 3rem);
+      padding-bottom: 5rem;
       background: var(--clr-primary);
       color: var(--clr-white);
     }
@@ -404,22 +387,140 @@
 
   <main>
 
-    <!-- ===== HERO ===== -->
-    <section class="hero" id="home" aria-label="Hero sectie">
-      <img class="hero__micel" src="Brand%20assets/MWK%20-%20Stijlelement%20-%20hero.svg" alt="" aria-hidden="true" />
-      <div class="container hero__content">
-        <div class="hero__text">
-          <a href="index.html" class="hero__back">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-            Terug naar home
-          </a>
-          <h1 class="hero__title">Werken bij MWK</h1>
-          <p class="hero__sub">MWK Facilitaire Diensten groeit hard en is op zoek naar gemotiveerde collega's in regio Den Haag. Divers schoonmaakwerk, wisselende opdrachtgevers en een team waarin je echt meegroeit.</p>
-          <div class="hero__actions">
-            <a href="#vacature" class="btn btn--accent">Bekijk de vacature</a>
-            <a href="#solliciteren" class="btn btn--ghost">Direct solliciteren</a>
+    <!-- ===== VACATURE ===== -->
+    <section class="vacature-section" id="vacature" aria-labelledby="vacature-titel">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label" style="color: var(--clr-accent);">Vacature</p>
+          <h1 class="section-title" id="vacature-titel" style="color: var(--clr-white);">Onze openstaande vacature</h1>
+          <p class="section-sub" style="color: rgba(255,255,255,.75);">Word jij onze nieuwe collega?</p>
+        </header>
+
+        <article class="vacature-card">
+          <span class="vacature-card__badge">Direct beschikbaar</span>
+          <h2 class="vacature-card__title">Allround schoonmaakmedewerker</h2>
+          <div class="vacature-card__meta">
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Regio Den Haag
+            </span>
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+              Parttime / fulltime in overleg
+            </span>
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Startdatum in overleg
+            </span>
           </div>
-        </div>
+
+          <div class="vacature-card__grid">
+            <div>
+              <h3 class="vacature-card__heading">Werkzaamheden</h3>
+              <ul class="vacature-list">
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  Het zelfstandig schoonmaken van kantoren, algemene ruimten, trappenhuizen en bedrijfsruimten
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  Zorgvuldig omgaan met materialen en schoonmaakmiddelen
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  Signaleren en doorgeven van bijzonderheden aan je contactpersoon
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  Werken bij diverse, wisselende opdrachtgevers in de regio
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="vacature-card__heading">Wat vragen wij</h3>
+              <ul class="vacature-list">
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  Je beschikt over een rijbewijs
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  Ervaring in de facilitaire dienstverlening<span class="vacature-card__pre">Pre</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  Je bent zelfstandig, nauwkeurig en verantwoordelijk
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  Je bent flexibel en klantvriendelijk
+                </li>
+              </ul>
+
+              <h3 class="vacature-card__heading" style="margin-top: 2rem;">Wat bieden wij</h3>
+              <ul class="vacature-list">
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  Een leuke werkomgeving met een goede sfeer
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  De mogelijkheid om mee te groeien met MWK
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  Afwisselend werk bij diverse opdrachtgevers
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="vacature-card__cta">
+            <a href="#solliciteren" class="btn btn--primary">Solliciteer direct</a>
+            <p>Of bel ons op <a href="tel:+31657930729" style="color: var(--clr-primary); font-weight: 700;">+31 6 57 93 07 29</a></p>
+          </div>
+
+          <div class="vacature-card__share">
+            <p class="vacature-card__share-label">Deel deze vacature</p>
+            <div class="vacature-share">
+              <a class="vacature-share__link" href="https://wa.me/?text=Vacature%20bij%20MWK%20Facilitaire%20Diensten%3A%20Allround%20schoonmaakmedewerker%20(regio%20Den%20Haag)%20https%3A%2F%2Fwww.mwk.nl%2Fwerken-bij-mwk.html%23vacature" target="_blank" rel="noopener" aria-label="Deel via WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.288.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                  <path d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.996.53 3.874 1.517 5.522L2 22l4.646-1.484A9.96 9.96 0 0012.004 22C17.522 22 22 17.522 22 12.004 22 6.486 17.522 2 12.004 2zm0 18.13a8.09 8.09 0 01-4.396-1.28l-.315-.19-2.767.883.883-2.7-.203-.325a8.11 8.11 0 01-1.28-4.396c0-4.482 3.646-8.128 8.128-8.128 4.482 0 8.128 3.646 8.128 8.128 0 4.482-3.646 8.128-8.128 8.128z"/>
+                </svg>
+              </a>
+              <a class="vacature-share__link" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.mwk.nl%2Fwerken-bij-mwk.html%23vacature" target="_blank" rel="noopener" aria-label="Deel via LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                  <circle cx="4" cy="4" r="2"/>
+                </svg>
+              </a>
+              <a class="vacature-share__link" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mwk.nl%2Fwerken-bij-mwk.html%23vacature" target="_blank" rel="noopener" aria-label="Deel via Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M22 12a10 10 0 10-11.5 9.87v-6.98h-2.5V12h2.5V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.98A10 10 0 0022 12z"/>
+                </svg>
+              </a>
+              <a class="vacature-share__link" href="https://twitter.com/intent/tweet?text=Vacature%20bij%20MWK%20Facilitaire%20Diensten%3A%20Allround%20schoonmaakmedewerker%20(regio%20Den%20Haag)&amp;url=https%3A%2F%2Fwww.mwk.nl%2Fwerken-bij-mwk.html%23vacature" target="_blank" rel="noopener" aria-label="Deel via X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+              <a class="vacature-share__link" href="mailto:?subject=Vacature%20bij%20MWK%3A%20Allround%20schoonmaakmedewerker&amp;body=Hoi%2C%0A%0AMisschien%20interessant%20voor%20jou%3A%20MWK%20Facilitaire%20Diensten%20zoekt%20een%20Allround%20schoonmaakmedewerker%20in%20regio%20Den%20Haag.%0A%0ABekijk%20de%20vacature%20hier%3A%20https%3A%2F%2Fwww.mwk.nl%2Fwerken-bij-mwk.html%23vacature%0A%0AGroet" aria-label="Deel via e-mail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </a>
+              <button type="button" class="vacature-share__link vacature-share__link--copy" id="copy-vacature-link" data-url="https://www.mwk.nl/werken-bij-mwk.html#vacature" aria-label="Kopieer link naar deze vacature">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M10 13a5 5 0 007.07 0l2.83-2.83a5 5 0 00-7.07-7.07l-1.5 1.5"/>
+                  <path d="M14 11a5 5 0 00-7.07 0l-2.83 2.83a5 5 0 007.07 7.07l1.5-1.5"/>
+                </svg>
+                <span>Kopieer link</span>
+              </button>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -505,143 +606,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ===== VACATURE ===== -->
-    <section class="vacature-section" id="vacature" aria-labelledby="vacature-titel">
-      <div class="container">
-        <header class="section-header">
-          <p class="section-label" style="color: var(--clr-accent);">Vacature</p>
-          <h2 class="section-title" id="vacature-titel" style="color: var(--clr-white);">Onze openstaande vacature</h2>
-          <p class="section-sub" style="color: rgba(255,255,255,.75);">Word jij onze nieuwe collega?</p>
-        </header>
-
-        <article class="vacature-card">
-          <span class="vacature-card__badge">Direct beschikbaar</span>
-          <h3 class="vacature-card__title">Allround schoonmaakmedewerker</h3>
-          <div class="vacature-card__meta">
-            <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Regio Den Haag
-            </span>
-            <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
-              Parttime / fulltime in overleg
-            </span>
-            <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              Startdatum in overleg
-            </span>
-          </div>
-
-          <div class="vacature-card__grid">
-            <div>
-              <h4 class="vacature-card__heading">Werkzaamheden</h4>
-              <ul class="vacature-list">
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Het zelfstandig schoonmaken van kantoren, algemene ruimten, trappenhuizen en bedrijfsruimten
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Zorgvuldig omgaan met materialen en schoonmaakmiddelen
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Signaleren en doorgeven van bijzonderheden aan je contactpersoon
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Werken bij diverse, wisselende opdrachtgevers in de regio
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="vacature-card__heading">Wat vragen wij</h4>
-              <ul class="vacature-list">
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Je beschikt over een rijbewijs
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Ervaring in de facilitaire dienstverlening<span class="vacature-card__pre">Pre</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Je bent zelfstandig, nauwkeurig en verantwoordelijk
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Je bent flexibel en klantvriendelijk
-                </li>
-              </ul>
-
-              <h4 class="vacature-card__heading" style="margin-top: 2rem;">Wat bieden wij</h4>
-              <ul class="vacature-list">
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Een leuke werkomgeving met een goede sfeer
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  De mogelijkheid om mee te groeien met MWK
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Afwisselend werk bij diverse opdrachtgevers
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="vacature-card__cta">
-            <a href="#solliciteren" class="btn btn--primary">Solliciteer direct</a>
-            <p>Of bel ons op <a href="tel:+31657930729" style="color: var(--clr-primary); font-weight: 700;">+31 6 57 93 07 29</a></p>
-          </div>
-
-          <div class="vacature-card__share">
-            <p class="vacature-card__share-label">Deel deze vacature</p>
-            <div class="vacature-share">
-              <a class="vacature-share__link" href="https://wa.me/?text=Vacature%20bij%20MWK%20Facilitaire%20Diensten%3A%20Allround%20schoonmaakmedewerker%20(regio%20Den%20Haag)%20https%3A%2F%2Fwww.mwk.nl%2Fwerken-bij-mwk.html%23vacature" target="_blank" rel="noopener" aria-label="Deel via WhatsApp">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.288.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                  <path d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.996.53 3.874 1.517 5.522L2 22l4.646-1.484A9.96 9.96 0 0012.004 22C17.522 22 22 17.522 22 12.004 22 6.486 17.522 2 12.004 2zm0 18.13a8.09 8.09 0 01-4.396-1.28l-.315-.19-2.767.883.883-2.7-.203-.325a8.11 8.11 0 01-1.28-4.396c0-4.482 3.646-8.128 8.128-8.128 4.482 0 8.128 3.646 8.128 8.128 0 4.482-3.646 8.128-8.128 8.128z"/>
-                </svg>
-              </a>
-              <a class="vacature-share__link" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.mwk.nl%2Fwerken-bij-mwk.html%23vacature" target="_blank" rel="noopener" aria-label="Deel via LinkedIn">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
-                  <circle cx="4" cy="4" r="2"/>
-                </svg>
-              </a>
-              <a class="vacature-share__link" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mwk.nl%2Fwerken-bij-mwk.html%23vacature" target="_blank" rel="noopener" aria-label="Deel via Facebook">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M22 12a10 10 0 10-11.5 9.87v-6.98h-2.5V12h2.5V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.98A10 10 0 0022 12z"/>
-                </svg>
-              </a>
-              <a class="vacature-share__link" href="https://twitter.com/intent/tweet?text=Vacature%20bij%20MWK%20Facilitaire%20Diensten%3A%20Allround%20schoonmaakmedewerker%20(regio%20Den%20Haag)&amp;url=https%3A%2F%2Fwww.mwk.nl%2Fwerken-bij-mwk.html%23vacature" target="_blank" rel="noopener" aria-label="Deel via X">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                </svg>
-              </a>
-              <a class="vacature-share__link" href="mailto:?subject=Vacature%20bij%20MWK%3A%20Allround%20schoonmaakmedewerker&amp;body=Hoi%2C%0A%0AMisschien%20interessant%20voor%20jou%3A%20MWK%20Facilitaire%20Diensten%20zoekt%20een%20Allround%20schoonmaakmedewerker%20in%20regio%20Den%20Haag.%0A%0ABekijk%20de%20vacature%20hier%3A%20https%3A%2F%2Fwww.mwk.nl%2Fwerken-bij-mwk.html%23vacature%0A%0AGroet" aria-label="Deel via e-mail">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                  <polyline points="22,6 12,13 2,6"/>
-                </svg>
-              </a>
-              <button type="button" class="vacature-share__link vacature-share__link--copy" id="copy-vacature-link" data-url="https://www.mwk.nl/werken-bij-mwk.html#vacature" aria-label="Kopieer link naar deze vacature">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <path d="M10 13a5 5 0 007.07 0l2.83-2.83a5 5 0 00-7.07-7.07l-1.5 1.5"/>
-                  <path d="M14 11a5 5 0 00-7.07 0l-2.83 2.83a5 5 0 007.07 7.07l1.5-1.5"/>
-                </svg>
-                <span>Kopieer link</span>
-              </button>
-            </div>
-          </div>
-        </article>
       </div>
     </section>
 
