@@ -139,6 +139,7 @@
     }
     @media (max-width: 640px) {
       .vacature-card { padding: 2rem 1.5rem; }
+      .vacature-card__title { font-size: 1.4rem; }
     }
     .vacature-card__badge {
       display: inline-flex;
@@ -159,6 +160,8 @@
       font-weight: 800;
       color: var(--clr-primary);
       margin-bottom: .75rem;
+      overflow-wrap: break-word;
+      hyphens: auto;
     }
     .vacature-card__meta {
       display: flex;
