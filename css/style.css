@@ -1208,7 +1208,7 @@ address { font-style: normal; }
   .nav.open { transform: none; opacity: 1; pointer-events: auto; }
 
   .nav__list { flex-direction: column; align-items: stretch; gap: .25rem; }
-  .nav__link { border-radius: var(--radius-sm); padding: .75rem 1rem; }
+  .nav__link { display: block; border-radius: var(--radius-sm); padding: .75rem 1rem; }
   .nav__link--cta { text-align: center; margin-top: .5rem; }
 
   .diensten__grid,
