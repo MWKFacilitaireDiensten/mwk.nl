@@ -186,7 +186,43 @@
       <nav class="nav" id="nav" role="navigation" aria-label="Hoofdnavigatie">
         <ul class="nav__list">
           <li><a href="index.html" class="nav__link">Home</a></li>
-          <li><a href="index.html#diensten" class="nav__link">Diensten</a></li>
+          <li class="nav__item--mega">
+            <a href="index.html#diensten" class="nav__link nav__link--mega" aria-haspopup="true">
+              Diensten
+              <svg class="nav__caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </a>
+            <div class="mega-menu">
+              <div class="container">
+                <div class="mega-menu__inner">
+                  <a href="schoonmaak.html" class="mega-menu__item">
+                    <span class="mega-menu__img"><img src="images/optimized/Schoonmaak_7.jpg" alt="" style="object-position: center 20%;" loading="lazy" /></span>
+                    <span class="mega-menu__body">
+                      <span class="mega-menu__title">Schoonmaak</span>
+                      <span class="mega-menu__desc">Kantoren, bedrijfsruimten en woonruimten, volledig afgestemd op uw wensen en planning.</span>
+                    </span>
+                  </a>
+                  <a href="glas-gevelreiniging.html" class="mega-menu__item">
+                    <span class="mega-menu__img"><img src="images/optimized/Glas-en-Gevel_19.jpg" alt="" style="object-position: center;" loading="lazy" /></span>
+                    <span class="mega-menu__body">
+                      <span class="mega-menu__title">Glas- &amp; Gevelreiniging</span>
+                      <span class="mega-menu__desc">Vlekkeloze ramen en gevels voor een representatieve uitstraling.</span>
+                    </span>
+                  </a>
+                  <a href="huismeesterdiensten.html" class="mega-menu__item">
+                    <span class="mega-menu__img"><img src="images/optimized/Huismeester_28.jpg" alt="" style="object-position: center top;" loading="lazy" /></span>
+                    <span class="mega-menu__body">
+                      <span class="mega-menu__title">Huismeesterdiensten</span>
+                      <span class="mega-menu__desc">Een vast aanspreekpunt dat uw pand beheert en onderhoudt.</span>
+                    </span>
+                  </a>
+                </div>
+                <a href="index.html#diensten" class="mega-menu__all">
+                  Bekijk alle diensten
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </li>
           <li><a href="over-ons.html" class="nav__link">Over ons</a></li>
           <li><a href="werken-bij-mwk.html" class="nav__link">Werken bij MWK</a></li>
           <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
@@ -204,7 +240,7 @@
     <!-- ===== HERO ===== -->
     <section class="hero hero--photo" id="home" aria-label="Hero sectie">
       <div class="hero__photo">
-        <img src="images/optimized/Huismeester_25.jpg" alt="MWK huismeester in gesprek met bewoners" width="1920" height="1246" loading="eager" />
+        <img src="images/optimized/Huismeester_25.jpg" alt="MWK huismeester in gesprek met bewoners" style="object-position: 65% 0%;" width="1920" height="1246" loading="eager" />
       </div>
       <img class="hero__micel" src="Brand%20assets/MWK%20-%20Stijlelement%20-%20hero.svg" alt="" aria-hidden="true" />
       <div class="container hero__content">
