@@ -306,7 +306,7 @@ address { font-style: normal; }
 .mega-menu__body { padding: 1.25rem 1.4rem 1.5rem; }
 .mega-menu__title {
   display: block;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1.05rem;
   color: var(--clr-primary);
   margin-bottom: .4rem;
@@ -718,7 +718,7 @@ address { font-style: normal; }
 
 .service-card__title {
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--clr-white);
   line-height: 1.2;
 }
@@ -1012,14 +1012,31 @@ address { font-style: normal; }
    CONTACT
    ========================================= */
 .contact {
-  background: var(--clr-primary-d);
+  position: relative;
+  background: var(--clr-accent-d);
   padding: 7rem 0;
+  overflow: hidden;
 }
 
-.contact .section-label { color: var(--clr-accent); }
+/* Stijlelement in wit, rechtsonder aflopend (zoals achterkant visitekaartje) */
+.contact::after {
+  content: '';
+  position: absolute;
+  right: -90px; bottom: -70px;
+  width: clamp(380px, 46vw, 720px);
+  aspect-ratio: 201.25 / 157.69;
+  background: url('../Brand%20assets/MWK%20-%20Stijlelement%20-%20hero.svg') center / contain no-repeat;
+  filter: brightness(0) invert(1);
+  opacity: .28;
+  pointer-events: none;
+}
+
+.contact .section-label { color: rgba(255,255,255,.85); }
 .contact .section-title { color: var(--clr-white); }
 
 .contact__inner {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 5rem;
@@ -1027,7 +1044,7 @@ address { font-style: normal; }
 }
 
 .contact__sub {
-  color: rgba(255,255,255,.7);
+  color: rgba(255,255,255,.95);
   margin-bottom: 2.5rem;
   line-height: 1.75;
   font-size: 1.02rem;
@@ -1044,26 +1061,26 @@ address { font-style: normal; }
   align-items: center;
   gap: 1rem;
   padding: 1rem 1.25rem;
-  background: rgba(255,255,255,.07);
-  border: 1px solid rgba(255,255,255,.1);
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.22);
   border-radius: var(--radius-md);
   color: var(--clr-white);
   transition: background var(--transition), border-color var(--transition), transform var(--transition);
 }
 .contact__detail:hover {
-  background: rgba(255,255,255,.12);
-  border-color: rgba(255,255,255,.2);
+  background: rgba(255,255,255,.2);
+  border-color: rgba(255,255,255,.4);
   transform: translateX(4px);
 }
 
 .contact__detail-icon {
   width: 44px; height: 44px;
-  background: rgba(106,196,207,.18);
+  background: var(--clr-white);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--clr-accent);
+  color: var(--clr-accent-d);
   flex-shrink: 0;
 }
 .contact__detail-icon svg { width: 20px; height: 20px; }
@@ -1071,7 +1088,7 @@ address { font-style: normal; }
 .contact__detail strong {
   display: block;
   font-size: .73rem;
-  color: rgba(255,255,255,.5);
+  color: rgba(255,255,255,.85);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .08em;
@@ -1158,7 +1175,7 @@ address { font-style: normal; }
    FOOTER
    ========================================= */
 .footer {
-  background: #f4f4f5;
+  background: var(--clr-white);
   color: rgba(0,0,0,.6);
   padding-top: 5rem;
   border-top: 1px solid rgba(0,0,0,.08);
