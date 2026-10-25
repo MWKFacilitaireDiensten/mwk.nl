@@ -1767,13 +1767,6 @@ address { font-style: normal; }
   color: var(--clr-white);
 }
 .specialisme__tag svg { width: 18px; height: 18px; color: var(--clr-accent); flex-shrink: 0; }
-.specialisme__visual::before {
-  content: '';
-  position: absolute;
-  inset: 1.25rem -1.25rem -1.25rem 1.25rem;
-  border: 2px solid rgba(106,196,207,.45);
-  border-radius: var(--radius-xl);
-}
 .specialisme__img {
   position: relative;
   width: 100%;
