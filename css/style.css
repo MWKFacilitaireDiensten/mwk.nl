@@ -752,6 +752,178 @@ address { font-style: normal; }
 .service-card__cta:hover { gap: .7rem; }
 .service-card__cta:hover svg { transform: translateX(4px); }
 
+/* Modernere dienstenkaarten (alle schermen; maten per breakpoint hieronder) */
+@media all {
+  .service-card--schoonmaak  { --card-img: url('../images/optimized/Schoonmaak_7.jpg');     --card-pos: center 20%; }
+  .service-card--glas        { --card-img: url('../images/optimized/Glas-en-Gevel_19.jpg'); --card-pos: center; }
+  .service-card--huismeester { --card-img: url('../images/optimized/Huismeester_28.jpg');   --card-pos: center top; }
+
+  .service-card {
+    border-radius: 28px;
+    border: 1px solid rgba(43,49,129,.06);
+    transition: transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .45s ease;
+  }
+  .service-card:hover,
+  .service-card:focus-within {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 70px rgba(43,49,129,.20);
+  }
+
+  /* Foto in een eigen laag, zodat hij bij hover kan inzoomen */
+  .service-card--huismeester .service-card__header,
+  .service-card--schoonmaak .service-card__header,
+  .service-card--glas .service-card__header {
+    min-height: 380px;
+    padding: 2rem 2.25rem;
+    background-image: none;
+    background-color: var(--clr-primary);
+  }
+  .service-card__header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--card-img) var(--card-pos) / cover no-repeat;
+    transition: transform .8s cubic-bezier(.2,.8,.2,1);
+  }
+  .service-card:hover .service-card__header::before,
+  .service-card:focus-within .service-card__header::before {
+    transform: scale(1.07);
+  }
+
+  /* Diepere overlay met een vleugje MWK-blauw */
+  .service-card--huismeester .service-card__header::after,
+  .service-card--schoonmaak .service-card__header::after,
+  .service-card--glas .service-card__header::after {
+    background: linear-gradient(to bottom, rgba(30,35,96,0) 35%, rgba(30,35,96,.55) 70%, rgba(20,24,66,.88) 100%);
+  }
+
+  .service-card--huismeester .service-card__badge,
+  .service-card--schoonmaak .service-card__badge,
+  .service-card--glas .service-card__badge {
+    top: 1.5rem;
+    right: 1.5rem;
+    padding: .4rem 1rem;
+    font-size: .8rem;
+    letter-spacing: .02em;
+    box-shadow: 0 4px 14px rgba(0,0,0,.12);
+  }
+
+  /* Accentlijn boven de titel die bij hover uitschuift */
+  .service-card__title {
+    font-size: 2rem;
+    letter-spacing: -.01em;
+  }
+  .service-card__title::before {
+    content: '';
+    display: block;
+    width: 44px;
+    height: 4px;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    background: var(--clr-accent);
+    transition: width .45s cubic-bezier(.2,.8,.2,1);
+  }
+  .service-card:hover .service-card__title::before,
+  .service-card:focus-within .service-card__title::before { width: 88px; }
+
+  .service-card__body { padding: 2.25rem 2.25rem 2.5rem; }
+  .service-card__desc {
+    font-size: 1.075rem;
+    line-height: 1.75;
+    margin-bottom: 2rem;
+  }
+
+  /* CTA als pill-knop met pijl in een cirkel */
+  .service-card__cta {
+    align-self: flex-start;
+    gap: .75rem;
+    padding: .55rem .6rem .55rem 1.35rem;
+    border-radius: 50px;
+    background: var(--clr-accent-l);
+    color: var(--clr-primary);
+    font-size: 1rem;
+    transition: background .3s ease, color .3s ease, gap .3s ease;
+  }
+  .service-card__cta svg {
+    width: 34px;
+    height: 34px;
+    padding: 8px;
+    border-radius: 50%;
+    background: var(--clr-primary);
+    color: var(--clr-white);
+    transition: transform .3s ease, background .3s ease;
+  }
+  .service-card:hover .service-card__cta,
+  .service-card__cta:focus-visible {
+    background: var(--clr-primary);
+    color: var(--clr-white);
+    gap: 1rem;
+  }
+  .service-card:hover .service-card__cta svg,
+  .service-card__cta:focus-visible svg {
+    background: var(--clr-accent-d);
+    transform: translateX(2px);
+  }
+}
+
+/* Desktop: breder en ruimer */
+@media (min-width: 1101px) {
+  .diensten .container { width: min(1400px, 100% - 4rem); }
+  .diensten__grid { gap: 2rem; }
+}
+
+/* Tablet: iets compacter */
+@media (max-width: 1100px) {
+  .service-card { border-radius: 24px; }
+  .service-card--huismeester .service-card__header,
+  .service-card--schoonmaak .service-card__header,
+  .service-card--glas .service-card__header {
+    min-height: 300px;
+    padding: 1.5rem 1.75rem;
+  }
+  .service-card__title { font-size: 1.6rem; }
+  .service-card__title::before { margin-bottom: .8rem; }
+  .service-card__body { padding: 1.75rem 1.75rem 2rem; }
+  .service-card__desc { font-size: 1rem; margin-bottom: 1.5rem; }
+}
+
+/* Mobiel */
+@media (max-width: 560px) {
+  .service-card { border-radius: 20px; }
+  .service-card:hover,
+  .service-card:focus-within { transform: translateY(-4px); }
+  .service-card--huismeester .service-card__header,
+  .service-card--schoonmaak .service-card__header,
+  .service-card--glas .service-card__header {
+    min-height: 250px;
+    padding: 1.25rem 1.5rem;
+  }
+  .service-card--huismeester .service-card__badge,
+  .service-card--schoonmaak .service-card__badge,
+  .service-card--glas .service-card__badge {
+    top: 1rem;
+    right: 1rem;
+    padding: .3rem .8rem;
+    font-size: .72rem;
+  }
+  .service-card__title { font-size: 1.45rem; }
+  .service-card__title::before { width: 36px; height: 3px; margin-bottom: .7rem; }
+  .service-card:hover .service-card__title::before,
+  .service-card:focus-within .service-card__title::before { width: 64px; }
+  .service-card__body { padding: 1.5rem 1.5rem 1.75rem; }
+  .service-card__desc { font-size: .97rem; line-height: 1.7; margin-bottom: 1.25rem; }
+  .service-card__cta { font-size: .95rem; padding: .45rem .5rem .45rem 1.15rem; }
+  .service-card__cta svg { width: 30px; height: 30px; padding: 7px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card,
+  .service-card__header::before,
+  .service-card__title::before { transition: none; }
+  .service-card:hover .service-card__header::before,
+  .service-card:focus-within .service-card__header::before { transform: none; }
+}
+
 /* =========================================
    OVER ONS
    ========================================= */
