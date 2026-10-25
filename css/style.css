@@ -1270,6 +1270,7 @@ address { font-style: normal; }
 
 /* Form */
 .contact__form-wrap {
+  scroll-margin-top: calc(var(--header-h) + 1rem);
   background: var(--clr-white);
   border-radius: var(--radius-lg);
   padding: 2.5rem;
