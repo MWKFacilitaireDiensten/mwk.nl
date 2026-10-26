@@ -1212,19 +1212,6 @@ address { font-style: normal; }
   overflow: hidden;
 }
 
-/* Stijlelement in wit, rechtsonder aflopend (zoals achterkant visitekaartje) */
-.contact::after {
-  content: '';
-  position: absolute;
-  right: -90px; bottom: -70px;
-  width: clamp(380px, 46vw, 720px);
-  aspect-ratio: 201.25 / 157.69;
-  background: url('../Brand%20assets/MWK%20-%20Stijlelement%20-%20hero.svg') center / contain no-repeat;
-  filter: brightness(0) invert(1);
-  opacity: .28;
-  pointer-events: none;
-}
-
 .contact .section-label { color: rgba(255,255,255,.85); }
 .contact .section-title { color: var(--clr-white); }
 
@@ -1232,8 +1219,8 @@ address { font-style: normal; }
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 5rem;
+  grid-template-columns: 1fr 2.5fr;
+  gap: 3rem;
   align-items: start;
 }
 
