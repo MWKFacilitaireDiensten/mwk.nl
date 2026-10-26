@@ -1735,10 +1735,7 @@ address { font-style: normal; }
 .specialisme .section-title { color: var(--clr-primary); }
 .specialisme .section-title strong {
   font-weight: 700;
-  background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent-d));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--clr-accent-d);
 }
 
 .specialisme__text {
