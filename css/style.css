@@ -1279,7 +1279,7 @@ address { font-style: normal; }
   color: var(--clr-white);
   transition: background var(--transition), border-color var(--transition), transform var(--transition);
 }
-.contact__detail:hover {
+a.contact__detail:hover {
   background: rgba(255,255,255,.13);
   border-color: rgba(255,255,255,.45);
   transform: translateX(4px);
