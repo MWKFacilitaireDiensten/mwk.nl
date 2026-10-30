@@ -1417,7 +1417,7 @@ a.contact__detail:hover {
   align-items: flex-start;
 }
 
-.footer__logo-svg { height: 130px; width: auto; margin-bottom: 0; }
+.footer__logo-svg { height: 110px; width: auto; margin-bottom: 0; }
 
 .footer__nav-title {
   font-size: .73rem;
