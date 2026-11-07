@@ -1792,7 +1792,7 @@ a.contact__detail:hover {
 .specialisme__visual { position: relative; }
 .specialisme__tag {
   position: absolute;
-  top: 1.5rem; right: -1.25rem;
+  top: 1.5rem; left: -1.25rem;
   z-index: 1;
   display: inline-flex;
   align-items: center;
@@ -1963,7 +1963,7 @@ a.contact__detail:hover {
   .specialisme__top { grid-template-columns: 1fr; gap: 3.5rem; margin-bottom: 3rem; }
   .specialisme__visual { max-width: 480px; width: calc(100% - 1.25rem); margin-inline: auto; }
   .specialisme__badge { left: -.75rem; bottom: 1.25rem; }
-  .specialisme__tag { right: -.75rem; }
+  .specialisme__tag { left: -.75rem; }
 }
 @media (max-width: 768px) {
   .specialisme { padding: 4rem 0; }
@@ -1981,6 +1981,6 @@ a.contact__detail:hover {
   .specialisme__pillar:hover .specialisme__pillar-icon { transform: none; }
 }
 @media (max-width: 480px) {
-  .specialisme .section-title { font-size: 1.45rem; }
-  .specialisme .section-title strong { -webkit-hyphens: auto; hyphens: auto; }
+  .specialisme .section-title { font-size: clamp(1.1rem, 6vw, 1.45rem); }
+  .specialisme .section-title strong { -webkit-hyphens: manual; hyphens: manual; }
 }
