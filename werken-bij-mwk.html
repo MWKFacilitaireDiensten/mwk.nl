@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Werken bij MWK Facilitaire Diensten in regio Den Haag. Bouw mee aan een snelgroeiend bedrijf met divers schoonmaakwerk bij verschillende opdrachtgevers. Bekijk de vacature Allround schoonmaakmedewerker." />
-  <meta name="keywords" content="werken bij MWK, vacature schoonmaak, allround schoonmaakmedewerker, vacature Den Haag, schoonmaakwerk, baan schoonmaak Den Haag, MWK facilitaire diensten vacature" />
+  <meta name="description" content="Werken bij MWK Facilitaire Diensten. Bekijk alle openstaande vacatures in de schoonmaak in regio Den Haag en Rotterdam en bouw mee aan een snelgroeiend bedrijf." />
+  <meta name="keywords" content="werken bij MWK, vacatures schoonmaak, vacature Den Haag, vacature Rotterdam, schoonmaakmedewerker, baan schoonmaak, MWK facilitaire diensten vacatures" />
   <meta name="author" content="MWK Facilitaire Diensten" />
   <meta property="og:title" content="Werken bij MWK | MWK Facilitaire Diensten" />
-  <meta property="og:description" content="Bouw mee aan een snelgroeiend bedrijf. MWK zoekt een allround schoonmaakmedewerker in regio Den Haag." />
+  <meta property="og:description" content="Bouw mee aan een snelgroeiend bedrijf. Bekijk alle openstaande vacatures van MWK in regio Den Haag en Rotterdam." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.mwk.nl/werken-bij-mwk.html" />
-  <meta property="og:image" content="https://www.mwk.nl/images/Afbeelding%20medewerker%20MWK.png" />
+  <meta property="og:image" content="https://www.mwk.nl/images/optimized/Schoonmaak_specialisme.jpg" />
   <link rel="canonical" href="https://www.mwk.nl/werken-bij-mwk.html" />
   <link rel="icon" href="images/favicon.png?v=3" type="image/png" />
   <title>Werken bij MWK | MWK Facilitaire Diensten</title>
@@ -46,33 +46,13 @@
   </script>
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org/",
-    "@type": "JobPosting",
-    "title": "Allround schoonmaakmedewerker",
-    "description": "MWK Facilitaire Diensten zoekt een allround schoonmaakmedewerker voor het zelfstandig schoonmaken van kantoren, algemene ruimten, trappenhuizen en bedrijfsruimten bij diverse opdrachtgevers in regio Den Haag. Ervaring in de facilitaire dienstverlening is een pre. Een rijbewijs is vereist.",
-    "identifier": {
-      "@type": "PropertyValue",
-      "name": "MWK Facilitaire Diensten",
-      "value": "allround-schoonmaakmedewerker"
-    },
-    "datePosted": "2026-07-12",
-    "validThrough": "2026-10-12",
-    "employmentType": ["FULL_TIME", "PART_TIME"],
-    "hiringOrganization": {
-      "@type": "Organization",
-      "name": "MWK Facilitaire Diensten",
-      "sameAs": "https://www.mwk.nl",
-      "logo": "https://www.mwk.nl/Brand%20assets/MWK%20-%20Logo%20CMYK.svg"
-    },
-    "jobLocation": {
-      "@type": "Place",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Den Haag",
-        "addressRegion": "Zuid-Holland",
-        "addressCountry": "NL"
-      }
-    }
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Openstaande vacatures bij MWK Facilitaire Diensten",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "url": "https://www.mwk.nl/vacature-allround-schoonmaakmedewerker-rotterdam.html" },
+      { "@type": "ListItem", "position": 2, "url": "https://www.mwk.nl/vacature-allround-schoonmaakmedewerker-den-haag.html" }
+    ]
   }
   </script>
   <style>
@@ -127,184 +107,221 @@
     /* Sfeer / verhaal sectie */
     .sfeer-section { background: var(--clr-gray-lt); }
 
-    /* Vacature */
-    .vacature-section {
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Vacatures – hero + zoeken */
+    .vacatures-hero {
       padding-top: calc(var(--header-h) + 3rem);
-      padding-bottom: 5rem;
+      padding-bottom: 7rem;
       background: var(--clr-primary);
       color: var(--clr-white);
     }
-    .vacature-card {
+    .vacatures-search {
+      display: grid;
+      grid-template-columns: 1fr 240px;
+      gap: .75rem;
+      max-width: 760px;
+      margin: 2.5rem auto 0;
       background: var(--clr-white);
+      padding: .75rem;
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow-lg);
-      padding: 3rem;
-      margin-top: 3rem;
-      color: var(--clr-text);
     }
     @media (max-width: 640px) {
-      .vacature-card { padding: 2rem 1.5rem; }
-      .vacature-card__title { font-size: 1.4rem; }
+      .vacatures-search { grid-template-columns: 1fr; }
     }
-    .vacature-card__badge {
-      display: inline-flex;
+    .vacatures-search__field {
+      position: relative;
+      display: flex;
       align-items: center;
-      gap: .4rem;
-      background: var(--clr-accent-l);
-      color: var(--clr-accent-d);
-      font-size: .78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .05em;
-      padding: .4rem .9rem;
-      border-radius: 50px;
+    }
+    .vacatures-search__field svg {
+      position: absolute;
+      left: 1rem;
+      width: 19px;
+      height: 19px;
+      color: var(--clr-text-lt);
+      pointer-events: none;
+    }
+    .vacatures-search__input,
+    .vacatures-search__select {
+      width: 100%;
+      font: inherit;
+      font-size: .95rem;
+      color: var(--clr-text);
+      background: var(--clr-gray-lt);
+      border: 2px solid transparent;
+      border-radius: var(--radius-md);
+      padding: .9rem 1rem .9rem 2.85rem;
+      transition: border-color var(--transition), background var(--transition);
+    }
+    .vacatures-search__select {
+      appearance: none;
+      -webkit-appearance: none;
+      padding-right: 2.5rem;
+      cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right .9rem center;
+      background-size: 18px;
+    }
+    .vacatures-search__input:focus,
+    .vacatures-search__select:focus {
+      outline: none;
+      border-color: var(--clr-accent-d);
+      background-color: var(--clr-white);
+    }
+
+    /* Vacatures – lijst */
+    .vacatures-list-section {
+      display: flow-root;
+      background: var(--clr-gray-lt);
+      padding-bottom: 5rem;
+    }
+    .vacatures-list-wrap {
+      max-width: 960px;
+      margin: -4rem auto 0;
+      position: relative;
+    }
+    .vacatures-count {
+      color: var(--clr-white);
+      font-weight: 600;
+      font-size: .95rem;
       margin-bottom: 1.25rem;
     }
-    .vacature-card__title {
-      font-size: 1.7rem;
-      font-weight: 600;
-      color: var(--clr-primary);
-      margin-bottom: .75rem;
-      overflow-wrap: break-word;
-      hyphens: auto;
-    }
-    .vacature-card__meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      color: var(--clr-text-lt);
-      font-size: .92rem;
-      font-weight: 600;
-      margin-bottom: 2rem;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid var(--clr-gray-md);
-    }
-    .vacature-card__meta span {
-      display: inline-flex;
-      align-items: center;
-      gap: .45rem;
-    }
-    .vacature-card__meta svg { width: 17px; height: 17px; color: var(--clr-accent-d); flex-shrink: 0; }
-    .vacature-card__grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2.5rem;
-    }
-    @media (max-width: 720px) {
-      .vacature-card__grid { grid-template-columns: 1fr; }
-    }
-    .vacature-card__heading {
-      font-size: 1.02rem;
-      font-weight: 600;
-      color: var(--clr-primary);
-      margin-bottom: 1rem;
-    }
-    .vacature-list {
+    .vacatures-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: .85rem;
+      gap: 1.25rem;
     }
-    .vacature-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: .65rem;
-      color: var(--clr-text-lt);
-      line-height: 1.6;
-      font-size: .95rem;
+    .job-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 1.5rem;
+      background: var(--clr-white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      padding: 2rem 2.25rem;
+      color: var(--clr-text);
+      text-decoration: none;
+      border: 2px solid transparent;
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
     }
-    .vacature-list svg {
-      width: 18px;
-      height: 18px;
-      color: var(--clr-accent-d);
-      flex-shrink: 0;
-      margin-top: .15rem;
+    .job-card:hover,
+    .job-card:focus-visible {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--clr-accent);
+      outline: none;
     }
-    .vacature-card__pre {
+    @media (max-width: 720px) {
+      .job-card { grid-template-columns: 1fr; padding: 1.75rem 1.5rem; }
+    }
+    .job-card__badge {
       display: inline-block;
       background: var(--clr-accent-l);
       color: var(--clr-accent-d);
-      font-size: .78rem;
+      font-size: .74rem;
       font-weight: 700;
-      padding: .1rem .5rem;
-      border-radius: 5px;
-      margin-left: .4rem;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      padding: .3rem .8rem;
+      border-radius: 50px;
+      margin-bottom: .85rem;
     }
-    .vacature-card__cta {
-      margin-top: 2.5rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--clr-gray-md);
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 1.25rem;
-    }
-    .vacature-card__cta p {
-      color: var(--clr-text-lt);
-      font-size: .93rem;
-      margin: 0;
-    }
-
-    /* Delen */
-    .vacature-card__share {
-      margin-top: 2rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--clr-gray-md);
-    }
-    .vacature-card__share-label {
-      font-size: .93rem;
-      font-weight: 700;
+    .job-card__title {
+      font-size: 1.35rem;
+      font-weight: 600;
       color: var(--clr-primary);
-      margin-bottom: 1rem;
+      margin-bottom: .6rem;
+      overflow-wrap: break-word;
     }
-    .vacature-share {
+    .job-card__meta {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
-      gap: .75rem;
+      gap: .5rem 1.25rem;
+      color: var(--clr-text-lt);
+      font-size: .88rem;
+      font-weight: 600;
+      margin-bottom: .9rem;
     }
-    .vacature-share__link {
+    .job-card__meta span {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
+      gap: .4rem;
+    }
+    .job-card__meta svg { width: 16px; height: 16px; color: var(--clr-accent-d); flex-shrink: 0; }
+    .job-card__desc {
+      color: var(--clr-text-lt);
+      line-height: 1.65;
+      font-size: .95rem;
+      margin: 0;
+    }
+    .job-card__cta {
+      display: inline-flex;
+      align-items: center;
       gap: .5rem;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: var(--clr-gray-lt);
+      white-space: nowrap;
+      font-weight: 700;
+      font-size: .92rem;
       color: var(--clr-primary);
-      border: none;
-      cursor: pointer;
-      font: inherit;
-      transition: background var(--transition), color var(--transition), transform var(--transition);
-    }
-    .vacature-share__link:hover {
-      background: var(--clr-primary);
-      color: var(--clr-white);
-      transform: translateY(-2px);
-    }
-    .vacature-share__link svg { width: 19px; height: 19px; flex-shrink: 0; }
-    .vacature-share__link--copy {
-      width: auto;
-      padding: 0 1.1rem;
+      background: var(--clr-accent-l);
+      padding: .8rem 1.3rem;
       border-radius: 50px;
-      font-size: .87rem;
-      font-weight: 600;
+      transition: background var(--transition), color var(--transition);
     }
-    .vacature-share__link--copy.is-copied {
-      background: var(--clr-accent-d);
-      color: var(--clr-white);
+    .job-card:hover .job-card__cta { background: var(--clr-primary); color: var(--clr-white); }
+    .job-card__cta svg { width: 18px; height: 18px; }
+    @media (max-width: 720px) {
+      .job-card__cta { justify-self: start; }
+    }
+    .vacatures-empty {
+      background: var(--clr-white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      color: var(--clr-text-lt);
+      line-height: 1.7;
+    }
+    .vacatures-empty strong { display: block; color: var(--clr-primary); font-size: 1.1rem; margin-bottom: .4rem; }
+    .vacatures-empty button {
+      margin-top: 1rem;
+      background: none;
+      border: none;
+      font: inherit;
+      font-weight: 700;
+      color: var(--clr-accent-d);
+      cursor: pointer;
+      text-decoration: underline;
     }
 
-    /* Solliciteer / contact */
-    .solliciteer-note {
-      background: var(--clr-accent-l);
-      color: var(--clr-text);
-      border-radius: var(--radius-md);
-      padding: 1.25rem 1.5rem;
-      font-size: .92rem;
-      line-height: 1.6;
-      margin-bottom: 2rem;
+    /* Open sollicitatie */
+    .open-sollicitatie {
+      padding: 5rem 0;
+      background: var(--clr-primary);
+      color: var(--clr-white);
+      text-align: center;
+    }
+    .open-sollicitatie .section-sub { color: rgba(255,255,255,.75); margin-inline: auto; }
+    .open-sollicitatie__actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
@@ -431,140 +448,103 @@
 
   <main>
 
-    <!-- ===== VACATURE ===== -->
-    <section class="vacature-section" id="vacature" aria-labelledby="vacature-titel">
+    <!-- ===== VACATURES: HERO + ZOEKEN ===== -->
+    <section class="vacatures-hero" id="vacatures" aria-labelledby="vacatures-titel">
       <div class="container">
         <header class="section-header">
-          <p class="section-label" style="color: var(--clr-accent);">Vacature</p>
-          <h1 class="section-title" id="vacature-titel" style="color: var(--clr-white);">Onze openstaande vacature</h1>
-          <p class="section-sub" style="color: rgba(255,255,255,.75);">Word jij onze nieuwe collega?</p>
+          <p class="section-label" style="color: var(--clr-accent);">Werken bij MWK</p>
+          <h1 class="section-title" id="vacatures-titel" style="color: var(--clr-white);">Onze openstaande vacatures</h1>
+          <p class="section-sub" style="color: rgba(255,255,255,.75);">Word jij onze nieuwe collega? Zoek een vacature die bij jou past.</p>
         </header>
 
-        <article class="vacature-card">
-          <span class="vacature-card__badge">Direct beschikbaar</span>
-          <h2 class="vacature-card__title">Allround schoonmaakmedewerker</h2>
-          <div class="vacature-card__meta">
-            <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Regio Den Haag
-            </span>
-            <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
-              Parttime / fulltime in overleg
-            </span>
-            <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              Startdatum in overleg
-            </span>
-          </div>
+        <form class="vacatures-search" role="search" aria-label="Vacatures zoeken" onsubmit="return false;">
+          <label class="vacatures-search__field">
+            <span class="sr-only">Zoek op functie of trefwoord</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+            <input type="search" id="vacature-zoek" class="vacatures-search__input" placeholder="Zoek op functie of trefwoord" autocomplete="off" />
+          </label>
+          <label class="vacatures-search__field">
+            <span class="sr-only">Filter op regio</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <select id="vacature-regio" class="vacatures-search__select">
+              <option value="">Alle regio's</option>
+              <option value="den-haag">Regio Den Haag</option>
+              <option value="rotterdam">Regio Rotterdam</option>
+            </select>
+          </label>
+        </form>
+      </div>
+    </section>
 
-          <div class="vacature-card__grid">
-            <div>
-              <h3 class="vacature-card__heading">Werkzaamheden</h3>
-              <ul class="vacature-list">
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Het zelfstandig schoonmaken van kantoren, algemene ruimten, trappenhuizen en bedrijfsruimten
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Zorgvuldig omgaan met materialen en schoonmaakmiddelen
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Signaleren en doorgeven van bijzonderheden aan je contactpersoon
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Werken bij diverse, wisselende opdrachtgevers in de regio
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="vacature-card__heading">Wat vragen wij</h3>
-              <ul class="vacature-list">
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Je beschikt over een rijbewijs
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Ervaring in de facilitaire dienstverlening<span class="vacature-card__pre">Pre</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Je bent zelfstandig, nauwkeurig en verantwoordelijk
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Je bent flexibel en klantvriendelijk
-                </li>
-              </ul>
+    <!-- ===== VACATURES: LIJST ===== -->
+    <section class="vacatures-list-section" aria-label="Vacatureoverzicht">
+      <div class="container">
+        <div class="vacatures-list-wrap">
+          <p class="vacatures-count" id="vacatures-count" aria-live="polite">2 openstaande vacatures</p>
 
-              <h3 class="vacature-card__heading" style="margin-top: 2rem;">Wat bieden wij</h3>
-              <ul class="vacature-list">
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Een leuke werkomgeving met een goede sfeer
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  De mogelijkheid om mee te groeien met MWK
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Afwisselend werk bij diverse opdrachtgevers
-                </li>
-              </ul>
-            </div>
-          </div>
+          <ul class="vacatures-list" id="vacatures-list">
+            <li data-regio="rotterdam">
+              <a class="job-card" href="vacature-allround-schoonmaakmedewerker-rotterdam.html">
+                <div>
+                  <span class="job-card__badge">Nieuw</span>
+                  <h2 class="job-card__title">Allround schoonmaakmedewerker</h2>
+                  <div class="job-card__meta">
+                    <span>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                      Regio Rotterdam
+                    </span>
+                    <span>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                      Circa 10 uur per week
+                    </span>
+                    <span>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                      Rijbewijs vereist
+                    </span>
+                  </div>
+                  <p class="job-card__desc">Vind jij het leuk om zelfstandig van complex naar complex te rijden en de schoonmaak te verzorgen? Dan is deze functie wat voor jou!</p>
+                </div>
+                <span class="job-card__cta">
+                  Bekijk vacature
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+              </a>
+            </li>
+            <li data-regio="den-haag">
+              <a class="job-card" href="vacature-allround-schoonmaakmedewerker-den-haag.html">
+                <div>
+                  <span class="job-card__badge">Direct beschikbaar</span>
+                  <h2 class="job-card__title">Allround schoonmaakmedewerker</h2>
+                  <div class="job-card__meta">
+                    <span>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                      Regio Den Haag
+                    </span>
+                    <span>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                      Parttime / fulltime in overleg
+                    </span>
+                    <span>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                      Rijbewijs vereist
+                    </span>
+                  </div>
+                  <p class="job-card__desc">Zelfstandig schoonmaken van kantoren, algemene ruimten, trappenhuizen en bedrijfsruimten bij diverse opdrachtgevers in de regio.</p>
+                </div>
+                <span class="job-card__cta">
+                  Bekijk vacature
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+              </a>
+            </li>
+          </ul>
 
-          <div class="vacature-card__cta">
-            <a href="#solliciteren" class="btn btn--primary">Solliciteer direct</a>
-            <p>Of bel ons op <a href="tel:+31852501480" style="color: var(--clr-primary); font-weight: 700;">085 250 1480</a></p>
+          <div class="vacatures-empty" id="vacatures-empty" hidden>
+            <strong>Geen vacatures gevonden</strong>
+            Er zijn geen vacatures die passen bij je zoekopdracht. Probeer een ander trefwoord of stuur ons een open sollicitatie.
+            <br /><button type="button" id="vacatures-reset">Toon alle vacatures</button>
           </div>
-
-          <div class="vacature-card__share">
-            <p class="vacature-card__share-label">Deel deze vacature</p>
-            <div class="vacature-share">
-              <a class="vacature-share__link" href="https://wa.me/?text=Vacature%20bij%20MWK%20Facilitaire%20Diensten%3A%20Allround%20schoonmaakmedewerker%20(regio%20Den%20Haag)%20https%3A%2F%2Fwww.mwk.nl%2Fwerken-bij-mwk.html%23vacature" target="_blank" rel="noopener" aria-label="Deel via WhatsApp">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.288.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                  <path d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.996.53 3.874 1.517 5.522L2 22l4.646-1.484A9.96 9.96 0 0012.004 22C17.522 22 22 17.522 22 12.004 22 6.486 17.522 2 12.004 2zm0 18.13a8.09 8.09 0 01-4.396-1.28l-.315-.19-2.767.883.883-2.7-.203-.325a8.11 8.11 0 01-1.28-4.396c0-4.482 3.646-8.128 8.128-8.128 4.482 0 8.128 3.646 8.128 8.128 0 4.482-3.646 8.128-8.128 8.128z"/>
-                </svg>
-              </a>
-              <a class="vacature-share__link" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.mwk.nl%2Fwerken-bij-mwk.html%23vacature" target="_blank" rel="noopener" aria-label="Deel via LinkedIn">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
-                  <circle cx="4" cy="4" r="2"/>
-                </svg>
-              </a>
-              <a class="vacature-share__link" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mwk.nl%2Fwerken-bij-mwk.html%23vacature" target="_blank" rel="noopener" aria-label="Deel via Facebook">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M22 12a10 10 0 10-11.5 9.87v-6.98h-2.5V12h2.5V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.98A10 10 0 0022 12z"/>
-                </svg>
-              </a>
-              <a class="vacature-share__link" href="https://twitter.com/intent/tweet?text=Vacature%20bij%20MWK%20Facilitaire%20Diensten%3A%20Allround%20schoonmaakmedewerker%20(regio%20Den%20Haag)&amp;url=https%3A%2F%2Fwww.mwk.nl%2Fwerken-bij-mwk.html%23vacature" target="_blank" rel="noopener" aria-label="Deel via X">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                </svg>
-              </a>
-              <a class="vacature-share__link" href="mailto:?subject=Vacature%20bij%20MWK%3A%20Allround%20schoonmaakmedewerker&amp;body=Hoi%2C%0A%0AMisschien%20interessant%20voor%20jou%3A%20MWK%20Facilitaire%20Diensten%20zoekt%20een%20Allround%20schoonmaakmedewerker%20in%20regio%20Den%20Haag.%0A%0ABekijk%20de%20vacature%20hier%3A%20https%3A%2F%2Fwww.mwk.nl%2Fwerken-bij-mwk.html%23vacature%0A%0AGroet" aria-label="Deel via e-mail">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                  <polyline points="22,6 12,13 2,6"/>
-                </svg>
-              </a>
-              <button type="button" class="vacature-share__link vacature-share__link--copy" id="copy-vacature-link" data-url="https://www.mwk.nl/werken-bij-mwk.html#vacature" aria-label="Kopieer link naar deze vacature">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <path d="M10 13a5 5 0 007.07 0l2.83-2.83a5 5 0 00-7.07-7.07l-1.5 1.5"/>
-                  <path d="M14 11a5 5 0 00-7.07 0l-2.83 2.83a5 5 0 007.07 7.07l1.5-1.5"/>
-                </svg>
-                <span>Kopieer link</span>
-              </button>
-            </div>
-          </div>
-        </article>
+        </div>
       </div>
     </section>
 
@@ -623,13 +603,13 @@
       <div class="container over-ons__inner">
         <div class="over-ons__visual" aria-hidden="true">
           <div class="over-ons__img-wrap">
-            <img class="over-ons__img-bg" src="images/Afbeelding medewerker MWK.png" alt="Medewerker van MWK Facilitaire Diensten aan het werk" loading="lazy" />
+            <img class="over-ons__img-bg" src="images/optimized/Schoonmaak_specialisme.jpg" alt="Lachende MWK medewerker met sprayflacon en microvezeldoek" width="1000" height="666" loading="lazy" />
           </div>
         </div>
         <div class="over-ons__content">
-          <p class="section-label">Regio Den Haag</p>
+          <p class="section-label">Den Haag &amp; Rotterdam</p>
           <h2 class="section-title" id="sfeer-titel">Een leuke werkomgeving met een goede sfeer</h2>
-          <p class="over-ons__text">MWK Facilitaire Diensten is gevestigd in regio Den Haag en actief bij een breed scala aan opdrachtgevers. Doordat wij snel groeien, ontstaan er doorlopend nieuwe kansen voor onze medewerkers om zich te ontwikkelen en meer verantwoordelijkheid op te pakken.</p>
+          <p class="over-ons__text">MWK Facilitaire Diensten is gevestigd in Den Haag en actief bij een breed scala aan opdrachtgevers in de regio's Den Haag en Rotterdam. Doordat wij snel groeien, ontstaan er doorlopend nieuwe kansen voor onze medewerkers om zich te ontwikkelen en meer verantwoordelijkheid op te pakken.</p>
           <p class="over-ons__text">Wij vinden een prettige werksfeer minstens zo belangrijk als goed werk leveren. Korte lijnen met collega's en leidinggevenden, persoonlijke aandacht en ruimte om mee te denken: dat is waar wij voor staan.</p>
           <div class="over-ons__feats">
             <div class="over-ons__feat">
@@ -638,7 +618,7 @@
             </div>
             <div class="over-ons__feat">
               <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              Regio Den Haag
+              Den Haag &amp; Rotterdam
             </div>
             <div class="over-ons__feat">
               <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
@@ -653,109 +633,16 @@
       </div>
     </section>
 
-    <!-- ===== SOLLICITEREN ===== -->
-    <section class="contact" id="solliciteren" aria-labelledby="solliciteren-titel">
-      <div class="container contact__inner">
-
-        <div class="contact__info">
-          <p class="section-label">Solliciteren</p>
-          <h2 class="section-title" id="solliciteren-titel">Solliciteer direct</h2>
-          <p class="contact__sub">Enthousiast geworden? Vul het formulier in en wij nemen zo snel mogelijk contact met je op.</p>
-
-          <div class="contact__details">
-            <a href="tel:+31852501480" class="contact__detail" aria-label="Bel ons">
-              <span class="contact__detail-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.59-.59a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-                </svg>
-              </span>
-              <span>
-                <strong>Telefoon</strong>
-                085 250 1480
-              </span>
-            </a>
-
-            <a href="mailto:info@mwk.nl" class="contact__detail" aria-label="Stuur een e-mail">
-              <span class="contact__detail-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                  <polyline points="22,6 12,13 2,6"/>
-                </svg>
-              </span>
-              <span>
-                <strong>E-mail</strong>
-                info@mwk.nl
-              </span>
-            </a>
-
-            <div class="contact__detail">
-              <span class="contact__detail-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                  <circle cx="12" cy="10" r="3"/>
-                </svg>
-              </span>
-              <span>
-                <strong>Adres</strong>
-                Van Loostraat 15, 2582 VZ Den Haag
-              </span>
-            </div>
-
-            <a href="https://www.linkedin.com/company/mwkfacilitairediensten" class="contact__detail" aria-label="Bezoek onze LinkedIn pagina" target="_blank" rel="noopener">
-              <span class="contact__detail-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
-                  <circle cx="4" cy="4" r="2"/>
-                </svg>
-              </span>
-              <span>
-                <strong>LinkedIn</strong>
-                MWK Facilitaire Diensten
-              </span>
-            </a>
-          </div>
+    <!-- ===== OPEN SOLLICITATIE ===== -->
+    <section class="open-sollicitatie" id="open-sollicitatie" aria-labelledby="open-sollicitatie-titel">
+      <div class="container">
+        <p class="section-label" style="color: var(--clr-accent);">Open sollicitatie</p>
+        <h2 class="section-title" id="open-sollicitatie-titel" style="color: var(--clr-white);">Staat jouw functie er niet tussen?</h2>
+        <p class="section-sub">Wij groeien snel en zijn altijd op zoek naar enthousiaste collega's. Stuur ons een open sollicitatie of bel ons gerust.</p>
+        <div class="open-sollicitatie__actions">
+          <a href="mailto:info@mwk.nl?subject=Open%20sollicitatie%20-%20Werken%20bij%20MWK" class="btn btn--accent">Stuur een open sollicitatie</a>
+          <a href="tel:+31852501480" class="btn btn--ghost">Bel 085 250 1480</a>
         </div>
-
-        <div class="contact__form-wrap">
-          <div class="solliciteer-note">
-            Je solliciteert voor de functie <strong>Allround schoonmaakmedewerker</strong>. Vertel ons kort iets over jezelf en je (werk)ervaring.
-          </div>
-          <form class="contact-form" id="contact-form" action="https://formspree.io/f/xkoyoabb" method="POST" novalidate aria-label="Sollicitatieformulier">
-            <input type="hidden" name="_subject" value="Sollicitatie: Allround schoonmaakmedewerker - Werken bij MWK" />
-            <input type="hidden" name="vacature" value="Allround schoonmaakmedewerker" />
-            <div class="contact-form__group">
-              <label for="naam" class="contact-form__label">Naam <span aria-hidden="true">*</span></label>
-              <input type="text" id="naam" name="naam" class="contact-form__input" placeholder="Uw volledige naam" required autocomplete="name" />
-              <span class="contact-form__error" id="naam-error" role="alert"></span>
-            </div>
-            <div class="contact-form__group">
-              <label for="email" class="contact-form__label">E-mail <span aria-hidden="true">*</span></label>
-              <input type="email" id="email" name="email" class="contact-form__input" placeholder="uw@email.nl" required autocomplete="email" />
-              <span class="contact-form__error" id="email-error" role="alert"></span>
-            </div>
-            <div class="contact-form__group">
-              <label for="telefoon" class="contact-form__label">Telefoon</label>
-              <input type="tel" id="telefoon" name="telefoon" class="contact-form__input" placeholder="+31 6 00 00 00 00" autocomplete="tel" />
-            </div>
-            <div class="contact-form__group">
-              <label for="bericht" class="contact-form__label">Motivatie <span aria-hidden="true">*</span></label>
-              <textarea id="bericht" name="bericht" class="contact-form__input contact-form__textarea" placeholder="Vertel ons iets over jezelf, je ervaring en waarom je bij MWK wilt werken..." required rows="5"></textarea>
-              <span class="contact-form__error" id="bericht-error" role="alert"></span>
-            </div>
-            <button type="submit" class="btn btn--primary btn--full" id="submit-btn">
-              <span class="btn__text">Verstuur sollicitatie</span>
-              <span class="btn__spinner" aria-hidden="true"></span>
-            </button>
-            <p class="contact-form__privacy">We gebruiken je gegevens alleen om je sollicitatie te behandelen. Lees onze <a href="privacyverklaring.html">privacyverklaring</a>.</p>
-            <div class="contact-form__success" id="form-success" role="status" aria-live="polite" hidden>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <polyline points="20 6 9 17 4 12"/>
-              </svg>
-              Bedankt voor je sollicitatie! Wij nemen zo snel mogelijk contact met je op.
-            </div>
-          </form>
-        </div>
-
       </div>
     </section>
 
@@ -832,34 +719,49 @@
   <script src="js/main.js"></script>
   <script>
     (function () {
-      var copyBtn = document.getElementById('copy-vacature-link');
-      if (!copyBtn) return;
-      var label = copyBtn.querySelector('span');
-      var defaultText = label.textContent;
-      copyBtn.addEventListener('click', function () {
-        var url = copyBtn.getAttribute('data-url');
-        var showCopied = function () {
-          label.textContent = 'Gekopieerd!';
-          copyBtn.classList.add('is-copied');
-          setTimeout(function () {
-            label.textContent = defaultText;
-            copyBtn.classList.remove('is-copied');
-          }, 2000);
-        };
-        if (navigator.clipboard && window.isSecureContext) {
-          navigator.clipboard.writeText(url).then(showCopied);
-        } else {
-          var temp = document.createElement('textarea');
-          temp.value = url;
-          temp.style.position = 'fixed';
-          temp.style.opacity = '0';
-          document.body.appendChild(temp);
-          temp.select();
-          try { document.execCommand('copy'); } catch (e) {}
-          document.body.removeChild(temp);
-          showCopied();
-        }
+      var input = document.getElementById('vacature-zoek');
+      var regio = document.getElementById('vacature-regio');
+      var list = document.getElementById('vacatures-list');
+      var count = document.getElementById('vacatures-count');
+      var empty = document.getElementById('vacatures-empty');
+      var reset = document.getElementById('vacatures-reset');
+      if (!input || !regio || !list) return;
+      var items = Array.prototype.slice.call(list.children);
+
+      function normalize(s) {
+        return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+      }
+
+      function filter() {
+        var terms = normalize(input.value).split(/\s+/).filter(Boolean);
+        var r = regio.value;
+        var visible = 0;
+        items.forEach(function (li) {
+          var text = normalize(li.textContent);
+          var matchText = terms.every(function (t) { return text.indexOf(t) !== -1; });
+          var matchRegio = !r || li.getAttribute('data-regio') === r;
+          var show = matchText && matchRegio;
+          li.hidden = !show;
+          if (show) visible++;
+        });
+        count.textContent = visible === 1 ? '1 openstaande vacature' : visible + ' openstaande vacatures';
+        empty.hidden = visible !== 0;
+      }
+
+      input.addEventListener('input', filter);
+      regio.addEventListener('change', filter);
+      reset.addEventListener('click', function () {
+        input.value = '';
+        regio.value = '';
+        filter();
+        input.focus();
       });
+
+      // Ondersteun links als werken-bij-mwk.html?zoek=rotterdam of ?regio=den-haag
+      var params = new URLSearchParams(window.location.search);
+      if (params.get('zoek')) input.value = params.get('zoek');
+      if (params.get('regio')) regio.value = params.get('regio');
+      filter();
     })();
   </script>
 </body>
