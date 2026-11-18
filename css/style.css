@@ -1555,10 +1555,40 @@ a.contact__detail:hover {
 }
 
 @media (max-width: 768px) {
-  :root { --header-h: 72px; }
+  /* --header-h = hoogte bovenaan de pagina; --header-float-h = zwevende balk */
+  :root { --header-h: 92px; --header-float-h: 72px; }
   .logo-svg { height: 55px; }
 
-  .hamburger { display: flex; }
+  /* Mobiele header (wit)
+     - bovenaan de pagina: ruime balk over de volle breedte
+     - na scrollen (.scrolled): compactere zwevende balk met ronde hoeken */
+  .header {
+    border: 1px solid transparent;
+    transition: top var(--transition), left var(--transition), right var(--transition),
+                height var(--transition), border-radius var(--transition),
+                border-color var(--transition), box-shadow var(--transition);
+  }
+  /* Meer ruimte tussen logo/menuknop en de zijkanten */
+  .header__inner { width: calc(100% - 3.5rem); }
+
+  .header.scrolled {
+    top: 10px;
+    left: 12px;
+    right: 12px;
+    height: var(--header-float-h);
+    border-color: var(--clr-gray-md);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 28px rgba(43,49,129,.18);
+  }
+  .header.scrolled .header__inner { width: calc(100% - 2.5rem); }
+
+  .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px; height: 44px;
+    padding: 0;
+  }
 
   .nav {
     position: fixed;
@@ -1567,6 +1597,8 @@ a.contact__detail:hover {
     background: var(--clr-white);
     border-bottom: 1px solid var(--clr-gray-md);
     box-shadow: var(--shadow-md);
+    max-height: calc(100svh - var(--header-h));
+    overflow-y: auto;
     padding: 1rem 1.25rem 1.5rem;
     transform: translateY(-10px);
     opacity: 0;
@@ -1574,6 +1606,16 @@ a.contact__detail:hover {
     transition: opacity var(--transition), transform var(--transition);
   }
   .nav.open { transform: none; opacity: 1; pointer-events: auto; }
+
+  /* Menu als los kaartje onder de zwevende balk */
+  .header.scrolled .nav {
+    top: calc(var(--header-float-h) + 18px);
+    left: 12px; right: 12px;
+    border-bottom: 0;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 14px 32px rgba(43,49,129,.18);
+    max-height: calc(100svh - var(--header-float-h) - 40px);
+  }
 
   .nav__list { flex-direction: column; align-items: stretch; gap: .25rem; }
   .nav__link { display: block; border-radius: var(--radius-sm); padding: .75rem 1rem; }
