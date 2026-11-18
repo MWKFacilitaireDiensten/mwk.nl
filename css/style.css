@@ -202,13 +202,62 @@ address { font-style: normal; }
   z-index: 100;
   height: var(--header-h);
   background: var(--clr-white);
-  border-bottom: 1px solid transparent;
-  transition: border-color var(--transition), box-shadow var(--transition);
+  border: 1px solid transparent;
+  transition: top var(--transition), left var(--transition), right var(--transition),
+              height var(--transition), border-radius var(--transition),
+              background-color var(--transition),
+              border-color var(--transition), box-shadow var(--transition);
 }
 
-.header.scrolled {
-  border-color: var(--clr-gray-md);
-  box-shadow: 0 2px 16px rgba(43,49,129,.08);
+/* Matglas-laag: op een pseudo-element, zodat backdrop-filter het
+   vaste (position: fixed) mobiele menu in de header niet beïnvloedt */
+.header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: rgba(255,255,255,.72);
+  -webkit-backdrop-filter: blur(16px) saturate(170%);
+  backdrop-filter: blur(16px) saturate(170%);
+  opacity: 0;
+  transition: opacity var(--transition);
+  pointer-events: none;
+}
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .header.scrolled { background-color: transparent; }
+  .header.scrolled::before { opacity: 1; }
+}
+
+/* Desktop: na scrollen een zwevende witte balk (max. 1440px breed) */
+@media (min-width: 769px) {
+  /* Zelfde hoogte en logo als bovenaan; wit, zonder matglas */
+  .header.scrolled {
+    top: 14px;
+    left: max(1.25rem, calc(50% - 720px));
+    right: max(1.25rem, calc(50% - 720px));
+    background-color: var(--clr-white);
+    border-color: var(--clr-gray-md);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 28px rgba(43,49,129,.14);
+  }
+  .header.scrolled::before { opacity: 0; }
+
+  /* Megamenu als los kaartje onder de zwevende balk */
+  .header.scrolled .mega-menu {
+    top: calc(100% + 10px);
+    border: 1px solid var(--clr-gray-md);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+  /* Onzichtbare brug, zodat het menu open blijft bij het overgaan van het gat */
+  .header.scrolled .mega-menu::before {
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    top: -12px;
+    height: 12px;
+  }
 }
 
 .header__inner {
@@ -1566,32 +1615,7 @@ a.contact__detail:hover {
   /* Mobiele header (wit)
      - bovenaan de pagina: ruime balk over de volle breedte
      - na scrollen (.scrolled): compactere zwevende balk met ronde hoeken */
-  .header {
-    border: 1px solid transparent;
-    transition: top var(--transition), left var(--transition), right var(--transition),
-                height var(--transition), border-radius var(--transition),
-                background-color var(--transition),
-                border-color var(--transition), box-shadow var(--transition);
-  }
-  /* Matglas-laag: op een pseudo-element, zodat backdrop-filter het
-     vaste (position: fixed) menu in de header niet beïnvloedt */
-  .header::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    border-radius: inherit;
-    background: rgba(255,255,255,.72);
-    -webkit-backdrop-filter: blur(16px) saturate(170%);
-    backdrop-filter: blur(16px) saturate(170%);
-    opacity: 0;
-    transition: opacity var(--transition);
-    pointer-events: none;
-  }
-  @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-    .header.scrolled { background-color: transparent; }
-    .header.scrolled::before { opacity: 1; }
-  }
+  /* Matglas-laag en overgangen staan bij de algemene header-stijl */
 
   /* "Naar boven"-knop in dezelfde zwevende matglas-stijl als de header */
   .scroll-top {
