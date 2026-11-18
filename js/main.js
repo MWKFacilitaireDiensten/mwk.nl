@@ -61,14 +61,29 @@
 
   function closeNav() {
     nav.classList.remove('open');
+    document.documentElement.classList.remove('nav-open');
     hamburger.setAttribute('aria-expanded', 'false');
     hamburger.setAttribute('aria-label', 'Menu openen');
   }
 
   hamburger.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('open');
+    document.documentElement.classList.toggle('nav-open', isOpen);
     hamburger.setAttribute('aria-expanded', String(isOpen));
     hamburger.setAttribute('aria-label', isOpen ? 'Menu sluiten' : 'Menu openen');
+  });
+
+  // Close nav with Escape
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && nav.classList.contains('open')) {
+      closeNav();
+      hamburger.focus();
+    }
+  });
+
+  // Close nav when switching to desktop width
+  window.matchMedia('(min-width: 769px)').addEventListener('change', e => {
+    if (e.matches) closeNav();
   });
 
   // Close nav on link click
