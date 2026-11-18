@@ -781,7 +781,7 @@ address { font-style: normal; }
   .service-card--huismeester { --card-img: url('../images/optimized/Huismeester_28.jpg');   --card-pos: center top; }
 
   .service-card {
-    border-radius: 28px;
+    border-radius: var(--radius-md);
     border: 1px solid rgba(43,49,129,.06);
     transition: transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .45s ease;
   }
@@ -896,7 +896,7 @@ address { font-style: normal; }
 
 /* Tablet: iets compacter */
 @media (max-width: 1100px) {
-  .service-card { border-radius: 24px; }
+  .service-card { border-radius: var(--radius-md); }
   .service-card--huismeester .service-card__header,
   .service-card--schoonmaak .service-card__header,
   .service-card--glas .service-card__header {
@@ -911,7 +911,7 @@ address { font-style: normal; }
 
 /* Mobiel */
 @media (max-width: 560px) {
-  .service-card { border-radius: 20px; }
+  .service-card { border-radius: var(--radius-md); }
   .service-card:hover,
   .service-card:focus-within { transform: translateY(-4px); }
   .service-card--huismeester .service-card__header,
