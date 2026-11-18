@@ -1593,6 +1593,30 @@ a.contact__detail:hover {
     .header.scrolled::before { opacity: 1; }
   }
 
+  /* "Naar boven"-knop in dezelfde zwevende matglas-stijl als de header */
+  .scroll-top {
+    right: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    width: 48px; height: 48px;
+    border-radius: var(--radius-md);
+    background: rgba(255,255,255,.72);
+    -webkit-backdrop-filter: blur(16px) saturate(170%);
+    backdrop-filter: blur(16px) saturate(170%);
+    border: 1px solid var(--clr-gray-md);
+    color: var(--clr-primary);
+    box-shadow: 0 8px 28px rgba(43,49,129,.18);
+    animation: scroll-top-in var(--transition);
+  }
+  .scroll-top:hover { background: rgba(255,255,255,.72); transform: none; }
+  .scroll-top:active { transform: scale(.94); }
+  @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .scroll-top { background: var(--clr-white); }
+  }
+  @keyframes scroll-top-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: none; }
+  }
+
   /* Belknop naast het menu */
   .header__call {
     display: flex;
@@ -1697,7 +1721,6 @@ a.contact__detail:hover {
   .contact__form-wrap { padding: 1.75rem; }
   .hero__stats { gap: 1rem; }
   .hero__stat-num { font-size: 1.5rem; }
-  .scroll-top { bottom: 1.25rem; right: 1.25rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
